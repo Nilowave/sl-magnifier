@@ -62,7 +62,7 @@ class UI extends React.Component {
                 page = (
                     <div className="page2">
                         <div className="title">
-                            <h1 className="halt">Aha!</h1>
+                            <h1 className="halt">Splendid!</h1>
                             <h1>Welcome {this.state.name}.</h1>
                         </div>
                         <div className="line"></div>

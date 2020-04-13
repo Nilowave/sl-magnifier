@@ -28561,7 +28561,7 @@ var UI = /*#__PURE__*/function (_React$Component) {
             className: "title"
           }, /*#__PURE__*/_react.default.createElement("h1", {
             className: "halt"
-          }, "Aha!"), /*#__PURE__*/_react.default.createElement("h1", null, "Welcome ", this.state.name, ".")), /*#__PURE__*/_react.default.createElement("div", {
+          }, "Splendid!"), /*#__PURE__*/_react.default.createElement("h1", null, "Welcome ", this.state.name, ".")), /*#__PURE__*/_react.default.createElement("div", {
             className: "line"
           }), /*#__PURE__*/_react.default.createElement("div", {
             className: "input"
