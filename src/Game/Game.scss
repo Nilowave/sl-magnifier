@@ -1,0 +1,113 @@
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .egg-container {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        
+        .egg-wrapper {
+            cursor: pointer;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: min(50vw, 400px);
+            transform: translate(-50%,-50%);
+    
+        }
+        .colored-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+    
+        .egg {
+            width: min(50vw, 400px);
+            position: relative;
+    
+            &.colored {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                height: min(50vw, 430px);
+                background: url('../../static/egg-colored.png') center;
+                background-size: contain;
+            }
+        }
+    
+    }
+    
+    .floor {
+        width: 100vw;
+        height: 25vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #555;
+        border-top: solid 2px black;
+    
+        .shadow {
+            width: 120px;
+            height: 20px;
+            background: black;
+            border-radius: 60px / 10px;
+            position: absolute;
+            top: 2vh;
+            left: 50%;
+            transform: translateX(-60px);
+        }
+    }
+    
+    .sprite {
+        position: absolute;
+        left: 50vw;
+        bottom: 10vh;
+        width: 206px;
+        height: 206px;
+        // overflow: hidden;
+        background: url('../../static/idle-sprite.png') top left;
+        animation: idle 1s steps(1) infinite;
+
+        .head {
+            position: absolute;
+            top: -75px;
+            left: 30px;
+            width: 105px;
+            height: 130px;
+            background: url('../../static/heads/troy.png');
+            // border-radius: 50%;
+            transform-origin: bottom;
+            animation: idle-head 1s steps(1) infinite;
+        }
+    }
+    
+    @keyframes idle-head {
+        0%, 100% {transform: translate(0px,0px) rotate(0deg);}
+        50% {transform: translate(-5px,5px) rotate(3deg);}
+    }
+    
+    @keyframes idle {
+        0%, 100% {background-position: 0 0;}
+        50% {background-position: -100% 0;}
+    }
+    
+    @keyframes grain {
+        0%, 100% {transform: rotate(0deg);}
+        25% {transform: rotate(180deg);}
+        50% {transform: rotate(90deg);}
+        75% {transform: rotate(270deg);}
+    }
+
+}

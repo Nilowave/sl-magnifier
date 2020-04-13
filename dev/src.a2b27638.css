@@ -1,0 +1,286 @@
+.game {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.game .egg-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.game .egg-container .egg-wrapper {
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: min(50vw, 400px);
+  transform: translate(-50%, -50%);
+}
+.game .egg-container .colored-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.game .egg-container .egg {
+  width: min(50vw, 400px);
+  position: relative;
+}
+.game .egg-container .egg.colored {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: min(50vw, 430px);
+  background: url("/egg-colored.0bee9e28.png") center;
+  background-size: contain;
+}
+.game .floor {
+  width: 100vw;
+  height: 25vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #555;
+  border-top: solid 2px black;
+}
+.game .floor .shadow {
+  width: 120px;
+  height: 20px;
+  background: black;
+  border-radius: 60px/10px;
+  position: absolute;
+  top: 2vh;
+  left: 50%;
+  transform: translateX(-60px);
+}
+.game .sprite {
+  position: absolute;
+  left: 50vw;
+  bottom: 10vh;
+  width: 206px;
+  height: 206px;
+  background: url("/idle-sprite.611d6ddf.png") top left;
+  animation: idle 1s steps(1) infinite;
+}
+.game .sprite .head {
+  position: absolute;
+  top: -75px;
+  left: 30px;
+  width: 105px;
+  height: 130px;
+  background: url("/troy.f3eeeda6.png");
+  transform-origin: bottom;
+  animation: idle-head 1s steps(1) infinite;
+}
+@keyframes idle-head {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-5px, 5px) rotate(3deg);
+  }
+}
+@keyframes idle {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -100% 0;
+  }
+}
+@keyframes grain {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+}
+.ui {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2a2a2a;
+}
+.ui h1 {
+  width: 100vw;
+  color: white;
+  text-align: center;
+  font-family: "Bangers", cursive;
+  text-shadow: 5px 5px 0 #000;
+}
+.ui p {
+  color: white;
+  text-align: center;
+  font-family: "Bangers", cursive;
+  text-shadow: 5px 5px 0 #000;
+}
+.ui .title {
+  font-size: 8vw;
+  padding-top: 16vh;
+}
+.ui .title .halt {
+  font-size: 12vw;
+}
+.ui .line {
+  width: 40vw;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-left: 30vw;
+  margin-top: 5vh;
+}
+.ui .input {
+  margin-top: 5vh;
+  font-size: 4vw;
+  width: 80vw;
+  margin-left: 10vw;
+  text-align: center;
+  position: relative;
+}
+.ui .input h1 {
+  margin-bottom: 2vh;
+  width: 100%;
+}
+.ui .names {
+  text-align: center;
+}
+.ui .names p {
+  display: inline-block;
+  padding: 10px;
+  font-size: 3vw;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.ui .names p:hover {
+  opacity: 1;
+}
+.ui .weapons {
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ui .weapons .weapon {
+  width: 28%;
+  height: 30vh;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.ui .weapons .weapon:hover {
+  border: solid 1px white;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at center, #5f5f5f 0%, #2a2a2a 100%);
+}
+
+.app:after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  left: -50%;
+  top: -50%;
+  background-image: url("/grain.f60b5153.png");
+  animation: grain 1.5s steps(4) infinite;
+  pointer-events: none;
+}
+
+.grad {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 25%, black 100%);
+  pointer-events: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+	box-sizing: border-box;
+}
+
+span, p, h1, h2, h3, div {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+body {
+  background-color: #2a2a2a;
+}
+
+/*# sourceMappingURL=/src.a2b27638.css.map */

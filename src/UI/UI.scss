@@ -1,0 +1,92 @@
+
+.ui {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2a2a2a;
+
+    h1 {
+        width: 100vw;
+        color: white;
+        text-align: center;
+        font-family: 'Bangers', cursive;
+        text-shadow: 5px 5px 0 #000;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+        font-family: 'Bangers', cursive;
+        text-shadow: 5px 5px 0 #000;
+    }
+
+    .title {
+        font-size: 8vw;
+        padding-top: 16vh;
+
+        .halt {
+            font-size: 12vw;
+        }
+    }
+
+    .line {
+        width: 40vw;
+        height: 2px;
+        background-color: rgba(255,255,255,.5);
+        margin-left: 30vw;
+        margin-top: 5vh;
+    }
+
+    .input {
+        margin-top: 5vh;
+        font-size: 4vw;
+        width: 80vw;
+        margin-left: 10vw;
+        text-align: center;
+        position: relative;
+
+        h1 {
+            margin-bottom: 2vh;
+            width: 100%;
+        }
+    }
+
+    .names {
+        text-align: center;
+
+        p {
+            display: inline-block;
+            padding: 10px;
+            font-size: 3vw;
+            opacity: .5;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .weapons {
+        margin-top: 10vh;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .weapon {
+            width: 28%;
+            height: 30vh;
+            border: solid 1px rgba(255,255,255,.5);
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                border: solid 1px rgba(255,255,255,1);
+            }
+        }
+    }
+}

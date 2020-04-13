@@ -1,9 +1,15 @@
 var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
+var express = require('express');
+
+
+app.use(express.static('css'));
+app.use(express.static('img'));
+app.use(express.static('client'));
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/client/index.html');
 });
 
 var clicks = 0;
@@ -26,11 +32,11 @@ function setAmount() {
 
 io.on('connection', function(socket) {
   console.log("connect")
-  io.emit('show it', {color:color,value:setAmount()});
-  socket.on('click it', function(msg) {
-    clicks++;
+  io.emit('update egg', {color:color,value:setAmount()});
+  socket.on('click it', function(data) {
+    clicks += data;
     // console.log(clicks)
-    io.emit('show it', {color:color,value:setAmount()});
+    io.emit('update egg', {color:color,value:setAmount()});
   });
 });
 
