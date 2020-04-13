@@ -22,6 +22,9 @@
   width: min(50vw, 400px);
   transform: translate(-50%, -50%);
 }
+.game .egg-container .egg-wrapper.idle {
+  animation: idle-egg 1s steps(1) infinite;
+}
 .game .egg-container .colored-wrapper {
   position: absolute;
   width: 100%;
@@ -60,6 +63,7 @@
   top: 2vh;
   left: 50%;
   transform: translateX(-60px);
+  animation: idle-shadow 2s steps(1) infinite;
 }
 .game .sprite {
   position: absolute;
@@ -68,6 +72,8 @@
   width: 206px;
   height: 206px;
   background: url("/idle-sprite.611d6ddf.png") top left;
+}
+.game .sprite.idle {
   animation: idle 1s steps(1) infinite;
 }
 .game .sprite .head {
@@ -79,6 +85,22 @@
   background: url("/troy.f3eeeda6.png");
   transform-origin: bottom;
   animation: idle-head 1s steps(1) infinite;
+}
+@keyframes idle-shadow {
+  0%, 100% {
+    transform: translateX(-60px) scaleX(1);
+  }
+  50% {
+    transform: translateX(-60px) scaleX(0.95);
+  }
+}
+@keyframes idle-egg {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -51%);
+  }
 }
 @keyframes idle-head {
   0%, 100% {

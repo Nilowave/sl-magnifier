@@ -22,6 +22,11 @@
             top: 50%;
             width: min(50vw, 400px);
             transform: translate(-50%,-50%);
+
+            &.idle {
+                animation: idle-egg 1s steps(1) infinite;
+                
+            }
     
         }
         .colored-wrapper {
@@ -67,6 +72,8 @@
             top: 2vh;
             left: 50%;
             transform: translateX(-60px);
+
+            animation: idle-shadow 2s steps(1) infinite;
         }
     }
     
@@ -78,7 +85,11 @@
         height: 206px;
         // overflow: hidden;
         background: url('../../static/idle-sprite.png') top left;
-        animation: idle 1s steps(1) infinite;
+        
+        &.idle {
+            animation: idle 1s steps(1) infinite;
+            
+        }
 
         .head {
             position: absolute;
@@ -91,6 +102,16 @@
             transform-origin: bottom;
             animation: idle-head 1s steps(1) infinite;
         }
+    }
+    
+    @keyframes idle-shadow {
+        0%, 100% {transform: translateX(-60px) scaleX(1);}
+        50% {transform: translateX(-60px) scaleX(.95);}
+    }
+    
+    @keyframes idle-egg {
+        0%, 100% {transform: translate(-50%,-50%);}
+        50% {transform: translate(-50%,-51%);}
     }
     
     @keyframes idle-head {

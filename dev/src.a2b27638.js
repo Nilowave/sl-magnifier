@@ -28413,7 +28413,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-container"
       }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "egg-wrapper",
+        className: "egg-wrapper idle",
         onClick: this.props.onClick
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: "./egg-grey.png",
@@ -28430,7 +28430,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "shadow"
       }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "sprite"
+        className: "sprite idle"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "head"
       }))));

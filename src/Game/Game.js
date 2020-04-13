@@ -14,7 +14,7 @@ class Game extends React.Component {
             <div className="game">
                 
                 <div className="egg-container">
-                    <div className="egg-wrapper" onClick={this.props.onClick}>
+                    <div className="egg-wrapper idle" onClick={this.props.onClick}>
 
                         <img src="./egg-grey.png" className="egg" />
                         <div className="colored-wrapper" style={{height: this.props.progress + "%"}}>
@@ -25,7 +25,7 @@ class Game extends React.Component {
 
                 <div className="floor">
                     <div className="shadow"></div>
-                    <div className="sprite">
+                    <div className="sprite idle">
                         <div className="head"></div>
                     </div>
                 </div>
