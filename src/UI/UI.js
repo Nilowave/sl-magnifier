@@ -25,13 +25,21 @@ class UI extends React.Component {
     handleWeaponClick(weapon) {
         let data = {
             name: this.state.name,
-            weapon: weapon
+            weapon: weapon,
+            clicks: 0
         }
         this.props.onComplete(data);
     }
 
     render() {
-        let names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noëlle", "Krystin", "Kayla"];
+        let names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noëlle", "Kristina", "Kayla", "James", "Vinny"];
+
+        this.props.players.map(p => {
+            names.remove(p.name)
+            return p
+        })
+
+        // names.sort(function (a, b) { return 0.5 - Math.random() });
 
         let weapons = ["cottoncandy", "spoon", "hammer"];
 
@@ -50,7 +58,7 @@ class UI extends React.Component {
                             <div className="names">
                                 {
                                     names.map(n => {
-                                        return <p onClick={(e) => this.handleNameClick(n)} value={n}>{n}</p>
+                                        return <p key={n} onClick={(e) => this.handleNameClick(n)} value={n}>{n}</p>
                                     })
                                 }
                             </div>
@@ -67,11 +75,11 @@ class UI extends React.Component {
                         </div>
                         <div className="line"></div>
                         <div className="input">
-                            <h1 className="answer">Please, choose your method...</h1>
+                            <h1 className="answer">Please, choose your weapon of choice...</h1>
                             <div className="weapons">
                                 {
                                     weapons.map(w=>{
-                                        return <div className={`weapon ${w}`} onClick={ e =>{this.handleWeaponClick(w)}}></div>
+                                        return <div key={w} className={`weapon ${w}`} onClick={ e =>{this.handleWeaponClick(w)}}></div>
                                     })
                                 }
                             </div>
@@ -88,5 +96,16 @@ class UI extends React.Component {
         )
     }
 }
+
+Array.prototype.remove = function() {
+    var what, a = arguments, L = a.length, ax;
+    while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};
 
 export default UI

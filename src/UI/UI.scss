@@ -42,8 +42,8 @@
     .input {
         margin-top: 5vh;
         font-size: 4vh;
-        width: 80vw;
-        margin-left: 10vw;
+        width: 60vw;
+        margin-left: 20vw;
         text-align: center;
         position: relative;
 
@@ -61,7 +61,7 @@
             display: inline-block;
             padding: 10px;
             font-size: 6vh;
-            opacity: .5;
+            opacity: .3;
             cursor: pointer;
 
             &:hover {
@@ -99,13 +99,35 @@
 
         .weapon {
             width: 28%;
-            height: 90%;
+            // padding-bottom: 28%;
+            // height: 0;
             border: solid 5px rgba(255,255,255,.5);
             border-radius: 8px;
             cursor: pointer;
 
             &:hover {
                 border-color: rgba(255,255,255,1);
+            }
+
+            &.hammer {
+                background: url('../../static/hammer.png') center no-repeat;
+                background-size: 100%;
+            }
+
+            &.spoon {
+                background: url('../../static/spoon.png') center no-repeat;
+                background-size: 100%;
+            }
+
+            &.cottoncandy {
+                background: url('../../static/candy.png') center no-repeat;
+                background-size: 100%;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
             }
         }
     }

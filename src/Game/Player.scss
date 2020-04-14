@@ -1,0 +1,115 @@
+
+.players {
+
+    .sprite {
+        width: 15%;
+        height: 0;
+        padding-bottom: 15%;
+        background: url('../../static/idle-sprite.png') top left no-repeat;
+        background-position: 0 0;
+        background-size: 200%;
+        position: relative;
+
+        &.right {
+            transform: scaleX(-1);
+        }
+        
+        &.idle {
+            animation: idle 1s steps(1) infinite;            
+        }
+
+        .head {
+            position: absolute;
+            // top: -70px;
+            left: -8%;
+            width: 100%;
+            padding-bottom: 100%;
+            height: 0;
+            transform-origin: bottom;
+            background: url('../../static/heads/troy.png') top left no-repeat;
+            background-size: 100%;
+            
+            animation: idle-head 1s steps(1) infinite;
+            
+            &.Troy {
+                background: url('../../static/heads/troy.png') top left no-repeat;                
+                background-size: 100%;
+            }
+            &.Alison {
+                background: url('../../static/heads/alison.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Junior {
+                background: url('../../static/heads/junior.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Sombra {
+                background: url('../../static/heads/sombra.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Yusaku {
+                background: url('../../static/heads/yusaku.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Kit {
+                background: url('../../static/heads/kit.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Sean {
+                background: url('../../static/heads/sean.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Akiko {
+                background: url('../../static/heads/akiko.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Michael {
+                background: url('../../static/heads/michael.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Kelvin {
+                background: url('../../static/heads/kelvin.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Pete {
+                background: url('../../static/heads/pete.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Tyler {
+                background: url('../../static/heads/tyler.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Noelle {
+                background: url('../../static/heads/noelle.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Kristina {
+                background: url('../../static/heads/kristina.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Kayla {
+                background: url('../../static/heads/kayla.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.James {
+                background: url('../../static/heads/james.png') top left no-repeat;
+                background-size: 100%;
+            }
+            &.Vinny {
+                background: url('../../static/heads/vinny.png') top left no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+
+
+    @keyframes idle-head {
+        0%, 100% {transform: translate(0px,-55%) rotate(0deg);}
+        50% {transform: translate(-5px,-52%) rotate(3deg);}
+    }
+    
+    @keyframes idle {
+        0%, 100% {background-position: 0 0;}
+        50% {background-position: 100% 0;}
+    }
+}

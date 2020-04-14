@@ -1,3 +1,113 @@
+.players .sprite {
+  width: 15%;
+  height: 0;
+  padding-bottom: 15%;
+  background: url("/idle-sprite.611d6ddf.png") top left no-repeat;
+  background-position: 0 0;
+  background-size: 200%;
+  position: relative;
+}
+.players .sprite.right {
+  transform: scaleX(-1);
+}
+.players .sprite.idle {
+  animation: idle 1s steps(1) infinite;
+}
+.players .sprite .head {
+  position: absolute;
+  left: -8%;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+  transform-origin: bottom;
+  background: url("/troy.f3eeeda6.png") top left no-repeat;
+  background-size: 100%;
+  animation: idle-head 1s steps(1) infinite;
+}
+.players .sprite .head.Troy {
+  background: url("/troy.f3eeeda6.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Alison {
+  background: url("/alison.e807f150.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Junior {
+  background: url("/junior.91091476.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Sombra {
+  background: url("/sombra.a8af00f6.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Yusaku {
+  background: url("/yusaku.f2c90eaf.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Kit {
+  background: url("/kit.29c9f670.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Sean {
+  background: url("/sean.81a68c8e.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Akiko {
+  background: url("/akiko.6e4afdb4.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Michael {
+  background: url("/michael.527e7c33.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Kelvin {
+  background: url("/kelvin.b119eba6.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Pete {
+  background: url("/pete.b11c00eb.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Tyler {
+  background: url("/tyler.1e3e9e21.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Noelle {
+  background: url("/noelle.4b3843c9.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Kristina {
+  background: url("/kristina.2df797d1.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Kayla {
+  background: url("/kayla.f0b48fa8.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.James {
+  background: url("/james.db64e6db.png") top left no-repeat;
+  background-size: 100%;
+}
+.players .sprite .head.Vinny {
+  background: url("/vinny.ce045012.png") top left no-repeat;
+  background-size: 100%;
+}
+@keyframes idle-head {
+  0%, 100% {
+    transform: translate(0px, -55%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-5px, -52%) rotate(3deg);
+  }
+}
+@keyframes idle {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
 .game {
   width: 100vw;
   height: 100vh;
@@ -19,11 +129,26 @@
   position: relative;
   left: 50%;
   top: 50%;
-  width: min(50vw, 400px);
+  width: min(50vw, 540px);
+  height: min(50vw, 540px);
   transform: translate(-50%, -50%);
 }
 .game .egg-container .egg-wrapper.idle {
   animation: idle-egg 1s steps(1) infinite;
+}
+.game .egg-container .egg-wrapper.wiggle {
+  animation: wiggle-egg 0.5s steps(1) infinite;
+}
+.game .egg-container .egg-wrapper.boil {
+  animation: boil-egg 0.1s steps(1) infinite;
+}
+.game .egg-container .egg-wrapper .tap {
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top: 25%;
+  left: 30%;
 }
 .game .egg-container .colored-wrapper {
   position: absolute;
@@ -34,16 +159,81 @@
   overflow: hidden;
 }
 .game .egg-container .egg {
-  width: min(50vw, 400px);
+  width: min(50vw, 540px);
+  height: min(50vw, 540px);
   position: relative;
+  background: url("/egg-grey.150d39cf.png") no-repeat center center;
+  background-size: contain;
 }
 .game .egg-container .egg.colored {
   bottom: 0;
   left: 0;
   position: absolute;
-  height: min(50vw, 430px);
-  background: url("/egg-colored.0bee9e28.png") center;
+  background: url("/egg-colored.0bee9e28.png") no-repeat center center;
   background-size: contain;
+}
+.game .egg-container .egg.hover {
+  position: absolute;
+  top: 0;
+  background: url("/egg-hover.c7513655.png") no-repeat center center;
+  background-size: contain;
+  display: none;
+}
+.game .egg-container .egg.crack {
+  position: absolute;
+  display: none;
+}
+.game .egg-container .egg.crack.c1 {
+  top: 0;
+  display: block;
+  position: absolute;
+  background: url("/c1.ce52a800.png") no-repeat center center;
+  background-size: contain;
+}
+.game .egg-container .egg.crack.c2 {
+  top: 0;
+  display: block;
+  position: absolute;
+  background: url("/c2.21c347f3.png") no-repeat center center;
+  background-size: contain;
+}
+.game .egg-container .egg.crack.c3 {
+  top: 0;
+  display: block;
+  position: absolute;
+  background: url("/c3.3f383a34.png") no-repeat center center;
+  background-size: contain;
+}
+.game .egg-container .egg.crack.c4 {
+  top: 0;
+  display: block;
+  position: absolute;
+  background: url("/c4.78e6e573.png") no-repeat center center;
+  background-size: contain;
+}
+.game .egg-container .egg.crack.c5 {
+  top: 0;
+  display: block;
+  position: absolute;
+  background: url("/c5.5dade82e.png") no-repeat center center;
+  background-size: contain;
+}
+.game .egg-container .egg.crack.c6 {
+  top: 0;
+  display: block;
+  position: absolute;
+  background: url("/c6.1b9e1cc5.png") no-repeat center center;
+  background-size: contain;
+}
+.game .players {
+  width: 80vw;
+  height: 23vh;
+  position: absolute;
+  bottom: 5vh;
+  left: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .game .floor {
   width: 100vw;
@@ -63,28 +253,7 @@
   top: 2vh;
   left: 50%;
   transform: translateX(-60px);
-  animation: idle-shadow 2s steps(1) infinite;
-}
-.game .sprite {
-  position: absolute;
-  left: 12vw;
-  bottom: 10vh;
-  width: 206px;
-  height: 206px;
-  background: url("/idle-sprite.611d6ddf.png") top left;
-}
-.game .sprite.idle {
-  animation: idle 1s steps(1) infinite;
-}
-.game .sprite .head {
-  position: absolute;
-  top: -75px;
-  left: 30px;
-  width: 105px;
-  height: 130px;
-  background: url("/troy.f3eeeda6.png");
-  transform-origin: bottom;
-  animation: idle-head 1s steps(1) infinite;
+  animation: idle-shadow 1s steps(1) infinite;
 }
 @keyframes idle-shadow {
   0%, 100% {
@@ -102,34 +271,32 @@
     transform: translate(-50%, -51%);
   }
 }
-@keyframes idle-head {
-  0%, 100% {
-    transform: translate(0px, 0px) rotate(0deg);
+@keyframes wiggle-egg {
+  0% {
+    transform: translate(-50%, -50%) rotate(-10deg);
   }
-  50% {
-    transform: translate(-5px, 5px) rotate(3deg);
+  33% {
+    transform: translate(-50%, -50%) rotate(7deg);
   }
-}
-@keyframes idle {
-  0%, 100% {
-    background-position: 0 0;
+  66% {
+    transform: translate(-50%, -50%) rotate(-3deg);
   }
-  50% {
-    background-position: -100% 0;
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
-@keyframes grain {
-  0%, 100% {
-    transform: rotate(0deg);
+@keyframes boil-egg {
+  0% {
+    transform: translate(-50%, -50%) rotate(-5deg);
   }
-  25% {
-    transform: rotate(180deg);
+  33% {
+    transform: translate(-50%, -50%) rotate(5deg);
   }
-  50% {
-    transform: rotate(90deg);
+  66% {
+    transform: translate(-50%, -50%) rotate(-5deg);
   }
-  75% {
-    transform: rotate(270deg);
+  100% {
+    transform: translate(-50%, -50%) rotate(5deg);
   }
 }
 .ui {
@@ -170,8 +337,8 @@
 .ui .input {
   margin-top: 5vh;
   font-size: 4vh;
-  width: 80vw;
-  margin-left: 10vw;
+  width: 60vw;
+  margin-left: 20vw;
   text-align: center;
   position: relative;
 }
@@ -187,7 +354,7 @@
   display: inline-block;
   padding: 10px;
   font-size: 6vh;
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: pointer;
 }
 .ui .names p:hover {
@@ -216,13 +383,29 @@
 }
 .ui .weapons .weapon {
   width: 28%;
-  height: 90%;
   border: solid 5px rgba(255, 255, 255, 0.5);
   border-radius: 8px;
   cursor: pointer;
 }
 .ui .weapons .weapon:hover {
   border-color: white;
+}
+.ui .weapons .weapon.hammer {
+  background: url("/hammer.134fb1ff.png") center no-repeat;
+  background-size: 100%;
+}
+.ui .weapons .weapon.spoon {
+  background: url("/spoon.943753f4.png") center no-repeat;
+  background-size: 100%;
+}
+.ui .weapons .weapon.cottoncandy {
+  background: url("/candy.a5cb4082.png") center no-repeat;
+  background-size: 100%;
+}
+.ui .weapons .weapon:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 .app {
   width: 100vw;
@@ -255,6 +438,27 @@
   left: 0;
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 25%, black 100%);
   pointer-events: none;
+}
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(3%, -15%);
+  }
+  50% {
+    transform: translate(12%, 9%);
+  }
+  70% {
+    transform: translate(9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
 }
 
 html, body, div, span, applet, object, iframe,

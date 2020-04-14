@@ -28352,12 +28352,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/Game/Game.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/Game/Player.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../static/egg-colored.png":[["egg-colored.0bee9e28.png","static/egg-colored.png"],"static/egg-colored.png"],"./../../static/idle-sprite.png":[["idle-sprite.611d6ddf.png","static/idle-sprite.png"],"static/idle-sprite.png"],"./../../static/heads/troy.png":[["troy.f3eeeda6.png","static/heads/troy.png"],"static/heads/troy.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Game.js":[function(require,module,exports) {
+},{"./../../static/idle-sprite.png":[["idle-sprite.611d6ddf.png","static/idle-sprite.png"],"static/idle-sprite.png"],"./../../static/heads/troy.png":[["troy.f3eeeda6.png","static/heads/troy.png"],"static/heads/troy.png"],"./../../static/heads/alison.png":[["alison.e807f150.png","static/heads/alison.png"],"static/heads/alison.png"],"./../../static/heads/junior.png":[["junior.91091476.png","static/heads/junior.png"],"static/heads/junior.png"],"./../../static/heads/sombra.png":[["sombra.a8af00f6.png","static/heads/sombra.png"],"static/heads/sombra.png"],"./../../static/heads/yusaku.png":[["yusaku.f2c90eaf.png","static/heads/yusaku.png"],"static/heads/yusaku.png"],"./../../static/heads/kit.png":[["kit.29c9f670.png","static/heads/kit.png"],"static/heads/kit.png"],"./../../static/heads/sean.png":[["sean.81a68c8e.png","static/heads/sean.png"],"static/heads/sean.png"],"./../../static/heads/akiko.png":[["akiko.6e4afdb4.png","static/heads/akiko.png"],"static/heads/akiko.png"],"./../../static/heads/michael.png":[["michael.527e7c33.png","static/heads/michael.png"],"static/heads/michael.png"],"./../../static/heads/kelvin.png":[["kelvin.b119eba6.png","static/heads/kelvin.png"],"static/heads/kelvin.png"],"./../../static/heads/pete.png":[["pete.b11c00eb.png","static/heads/pete.png"],"static/heads/pete.png"],"./../../static/heads/tyler.png":[["tyler.1e3e9e21.png","static/heads/tyler.png"],"static/heads/tyler.png"],"./../../static/heads/noelle.png":[["noelle.4b3843c9.png","static/heads/noelle.png"],"static/heads/noelle.png"],"./../../static/heads/kristina.png":[["kristina.2df797d1.png","static/heads/kristina.png"],"static/heads/kristina.png"],"./../../static/heads/kayla.png":[["kayla.f0b48fa8.png","static/heads/kayla.png"],"static/heads/kayla.png"],"./../../static/heads/james.png":[["james.db64e6db.png","static/heads/james.png"],"static/heads/james.png"],"./../../static/heads/vinny.png":[["vinny.ce045012.png","static/heads/vinny.png"],"static/heads/vinny.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28366,6 +28366,79 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+require("./Player.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Player = /*#__PURE__*/function (_React$Component) {
+  _inherits(Player, _React$Component);
+
+  var _super = _createSuper(Player);
+
+  function Player(props) {
+    _classCallCheck(this, Player);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Player, [{
+    key: "render",
+    value: function render() {
+      console.log(this.props.progress);
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "player"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "sprite idle"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "head"
+      })));
+    }
+  }]);
+
+  return Player;
+}(_react.default.Component);
+
+var _default = Player;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./Player.scss":"src/Game/Player.scss"}],"src/Game/Game.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../static/egg-grey.png":[["egg-grey.150d39cf.png","static/egg-grey.png"],"static/egg-grey.png"],"./../../static/egg-colored.png":[["egg-colored.0bee9e28.png","static/egg-colored.png"],"static/egg-colored.png"],"./../../static/egg-hover.png":[["egg-hover.c7513655.png","static/egg-hover.png"],"static/egg-hover.png"],"./../../static/c1.png":[["c1.ce52a800.png","static/c1.png"],"static/c1.png"],"./../../static/c2.png":[["c2.21c347f3.png","static/c2.png"],"static/c2.png"],"./../../static/c3.png":[["c3.3f383a34.png","static/c3.png"],"static/c3.png"],"./../../static/c4.png":[["c4.78e6e573.png","static/c4.png"],"static/c4.png"],"./../../static/c5.png":[["c5.5dade82e.png","static/c5.png"],"static/c5.png"],"./../../static/c6.png":[["c6.1b9e1cc5.png","static/c6.png"],"static/c6.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Game.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Player = _interopRequireDefault(require("./Player"));
 
 require("./Game.scss");
 
@@ -28399,24 +28472,70 @@ var Game = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Game);
 
   function Game(props) {
+    var _this;
+
     _classCallCheck(this, Game);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.onMouseOver = _this.onMouseOver.bind(_assertThisInitialized(_this));
+    _this.onMouseOut = _this.onMouseOut.bind(_assertThisInitialized(_this));
+    _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
+    _this.egg = _react.default.createRef();
+    _this.crack = _react.default.createRef();
+    return _this;
   }
 
   _createClass(Game, [{
+    key: "onMouseOver",
+    value: function onMouseOver() {
+      document.querySelector(".game .egg-wrapper .hover").style.display = "block";
+    }
+  }, {
+    key: "onMouseOut",
+    value: function onMouseOut() {
+      document.querySelector(".game .egg-wrapper .hover").style.display = "none";
+    }
+  }, {
+    key: "onClick",
+    value: function onClick(e) {
+      if (this.props.endGame) return;
+      this.props.onClick(e);
+
+      if (this.props.progress >= 60) {
+        clearTimeout(this.eggTabDelay);
+        this.egg.current.classList.remove("idel");
+        this.egg.current.classList.remove("wiggle");
+        this.egg.current.classList.add("boil");
+        return;
+      }
+
+      this.egg.current.classList.remove("idel");
+      this.egg.current.classList.add("wiggle");
+      if (this.eggTabDelay) clearTimeout(this.eggTabDelay);
+      this.eggTabDelay = setTimeout(this.stopEggWiggle.bind(this), 500);
+    }
+  }, {
+    key: "stopEggWiggle",
+    value: function stopEggWiggle() {
+      this.egg.current.classList.remove("wiggle");
+      this.egg.current.classList.add("idel");
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(this.props.progress);
+      var p = 100 / 7;
+      var crack = Math.floor(this.props.progress / p);
+      var crackClass = crack > 0 ? "c" + crack : "";
+      crackClass = crack < 7 ? crackClass : "c6";
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "game"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-container"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-wrapper idle",
-        onClick: this.props.onClick
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        src: "./egg-grey.png",
+        onClick: this.onClick,
+        ref: this.egg
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "colored-wrapper",
@@ -28425,15 +28544,34 @@ var Game = /*#__PURE__*/function (_React$Component) {
         }
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg colored"
-      })))), /*#__PURE__*/_react.default.createElement("div", {
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "egg crack " + crackClass,
+        ref: this.crack
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "egg hover"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "tap",
+        onMouseOver: this.onMouseOver,
+        onMouseOut: this.onMouseOut
+      }))), /*#__PURE__*/_react.default.createElement("div", {
         className: "floor"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "shadow"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grad"
       }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "sprite idle"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "head"
-      }))));
+        className: "players"
+      }, this.props.players.map(function (p) {
+        return /*#__PURE__*/_react.default.createElement("div", {
+          key: p.name,
+          className: "sprite idle " + p.side,
+          style: {
+            marginTop: p.offset + "vh"
+          }
+        }, /*#__PURE__*/_react.default.createElement("div", {
+          className: "head " + p.name
+        }));
+      })));
     }
   }]);
 
@@ -28442,12 +28580,12 @@ var Game = /*#__PURE__*/function (_React$Component) {
 
 var _default = Game;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Game.scss":"src/Game/Game.scss"}],"src/UI/UI.scss":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Player":"src/Game/Player.js","./Game.scss":"src/Game/Game.scss"}],"src/UI/UI.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/UI/UI.js":[function(require,module,exports) {
+},{"./../../static/hammer.png":[["hammer.134fb1ff.png","static/hammer.png"],"static/hammer.png"],"./../../static/spoon.png":[["spoon.943753f4.png","static/spoon.png"],"static/spoon.png"],"./../../static/candy.png":[["candy.a5cb4082.png","static/candy.png"],"static/candy.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/UI/UI.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28515,7 +28653,8 @@ var UI = /*#__PURE__*/function (_React$Component) {
     value: function handleWeaponClick(weapon) {
       var data = {
         name: this.state.name,
-        weapon: weapon
+        weapon: weapon,
+        clicks: 0
       };
       this.props.onComplete(data);
     }
@@ -28524,7 +28663,12 @@ var UI = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noëlle", "Krystin", "Kayla"];
+      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noëlle", "Kristina", "Kayla", "James", "Vinny"];
+      this.props.players.map(function (p) {
+        names.remove(p.name);
+        return p;
+      }); // names.sort(function (a, b) { return 0.5 - Math.random() });
+
       var weapons = ["cottoncandy", "spoon", "hammer"];
       var page;
 
@@ -28546,6 +28690,7 @@ var UI = /*#__PURE__*/function (_React$Component) {
             className: "names"
           }, names.map(function (n) {
             return /*#__PURE__*/_react.default.createElement("p", {
+              key: n,
               onClick: function onClick(e) {
                 return _this2.handleNameClick(n);
               },
@@ -28567,10 +28712,11 @@ var UI = /*#__PURE__*/function (_React$Component) {
             className: "input"
           }, /*#__PURE__*/_react.default.createElement("h1", {
             className: "answer"
-          }, "Please, choose your method..."), /*#__PURE__*/_react.default.createElement("div", {
+          }, "Please, choose your weapon of choice..."), /*#__PURE__*/_react.default.createElement("div", {
             className: "weapons"
           }, weapons.map(function (w) {
             return /*#__PURE__*/_react.default.createElement("div", {
+              key: w,
               className: "weapon ".concat(w),
               onClick: function onClick(e) {
                 _this2.handleWeaponClick(w);
@@ -28588,6 +28734,23 @@ var UI = /*#__PURE__*/function (_React$Component) {
 
   return UI;
 }(_react.default.Component);
+
+Array.prototype.remove = function () {
+  var what,
+      a = arguments,
+      L = a.length,
+      ax;
+
+  while (L && this.length) {
+    what = a[--L];
+
+    while ((ax = this.indexOf(what)) !== -1) {
+      this.splice(ax, 1);
+    }
+  }
+
+  return this;
+};
 
 var _default = UI;
 exports.default = _default;
@@ -37663,6 +37826,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.connectSocket = connectSocket;
 exports.clickEgg = clickEgg;
+exports.startGame = startGame;
+exports.endGame = endGame;
 
 var _socket = _interopRequireDefault(require("socket.io-client"));
 
@@ -37672,12 +37837,37 @@ var socket = (0, _socket.default)('http://localhost:3000');
 
 function connectSocket(callback) {
   socket.on('update egg', function (data) {
-    return callback(null, data);
+    return callback({
+      type: "update-egg",
+      data: data
+    });
+  });
+  socket.on('update players', function (data) {
+    return callback({
+      type: "update-players",
+      data: data
+    });
+  });
+  socket.on('end game', function (data) {
+    return callback({
+      type: "end-game",
+      data: data
+    });
   });
 }
 
 function clickEgg(value) {
   socket.emit('click it', value);
+}
+
+function startGame(data) {
+  window.localStorage.setItem("sl-magnifier", JSON.stringify(data));
+  socket.emit('start game', data);
+}
+
+function endGame(player) {
+  console.log("END GAME");
+  socket.emit('end game', player);
 }
 },{"socket.io-client":"node_modules/socket.io-client/lib/index.js"}],"src/App/App.js":[function(require,module,exports) {
 "use strict";
@@ -37727,6 +37917,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+var AMMO = 2;
+
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
 
@@ -37740,41 +37932,102 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.startGame = _this.startGame.bind(_assertThisInitialized(_this));
+    _this.handleSocketResponse = _this.handleSocketResponse.bind(_assertThisInitialized(_this));
     _this.state = {
       value: 0,
-      start: false
+      start: false,
+      clicks: 0,
+      players: [],
+      endGame: false
     };
-    (0, _api.connectSocket)(function (err, eggState) {
-      return _this.setState(_objectSpread({}, eggState));
-    });
+    (0, _api.connectSocket)(_this.handleSocketResponse);
     return _this;
   }
 
   _createClass(App, [{
+    key: "handleSocketResponse",
+    value: function handleSocketResponse(response) {
+      switch (response.type) {
+        case "update-egg":
+          this.setState(_objectSpread({}, this.state, {}, response.data));
+          break;
+
+        case "update-players":
+          this.setState(_objectSpread({}, this.state, {
+            players: response.data
+          }));
+          break;
+
+        case "end-game":
+          this.runEndGame(response.data);
+          break;
+      }
+
+      if (response.type == "update-players" && !this.state.start) {
+        this.tryReconnect();
+      }
+    }
+  }, {
     key: "handleClick",
     value: function handleClick(e) {
-      (0, _api.clickEgg)(10);
+      var count = this.state.player.clicks;
+      count++;
+      this.setState(_objectSpread({}, this.state, {
+        player: _objectSpread({}, this.state.player, {
+          clicks: count
+        })
+      }));
+      (0, _api.clickEgg)(AMMO);
     }
   }, {
     key: "startGame",
-    value: function startGame(e) {
-      console.log(e);
+    value: function startGame(player) {
+      console.log("player", player);
       this.setState({
-        start: true
+        start: true,
+        player: player
       });
+      (0, _api.startGame)(player);
+    }
+  }, {
+    key: "runEndGame",
+    value: function runEndGame(data) {
+      this.setState(_objectSpread({}, this.state, {
+        endGame: true
+      }));
+      (0, _api.endGame)(this.state.player);
+    }
+  }, {
+    key: "tryReconnect",
+    value: function tryReconnect() {
+      var player = JSON.parse(window.localStorage.getItem("sl-magnifier"));
+      var match = this.state.players.filter(function (p) {
+        console.log("p", p);
+        return p.name == player.name;
+      })[0];
+
+      if (match) {
+        this.startGame(player);
+      } else {
+        window.localStorage.clear();
+      }
     }
   }, {
     key: "render",
     value: function render() {
+      // console.log(this.state.players)
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "app"
-      }, /*#__PURE__*/_react.default.createElement(_Game.default, {
-        onClick: this.handleClick,
-        progress: this.state.value * 100
-      }), !this.state.start && /*#__PURE__*/_react.default.createElement(_UI.default, {
-        onComplete: this.startGame
-      }), /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "grad"
+      }), /*#__PURE__*/_react.default.createElement(_Game.default, {
+        onClick: this.handleClick,
+        progress: this.state.value * 100,
+        players: this.state.players,
+        endGame: this.state.endGame
+      }), !this.state.start && /*#__PURE__*/_react.default.createElement(_UI.default, {
+        onComplete: this.startGame,
+        players: this.state.players
       }));
     }
   }]);
@@ -37836,7 +38089,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61283" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56165" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

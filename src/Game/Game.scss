@@ -20,14 +20,30 @@
             position: relative;
             left: 50%;
             top: 50%;
-            width: min(50vw, 400px);
+            width: min(50vw, 540px);
+            height: min(50vw, 540px);
             transform: translate(-50%,-50%);
 
             &.idle {
-                animation: idle-egg 1s steps(1) infinite;
-                
+                animation: idle-egg 1s steps(1) infinite;    
             }
-    
+
+            &.wiggle {
+                animation: wiggle-egg .5s steps(1) infinite;                
+            }
+
+            &.boil {
+                animation: boil-egg .1s steps(1) infinite;    
+            }
+
+            .tap {
+                width: 40%;
+                height: 50%;
+                position: absolute;
+                background-color: rgba(0,0,0,0);
+                top: 25%;
+                left: 30%;
+            }
         }
         .colored-wrapper {
             position: absolute;
@@ -39,19 +55,94 @@
         }
     
         .egg {
-            width: min(50vw, 400px);
+            width: min(50vw, 540px);
+            height: min(50vw, 540px);
             position: relative;
+
+            background: url('../../static/egg-grey.png') no-repeat center center ;
+            background-size: contain;
     
             &.colored {
                 bottom: 0;
                 left: 0;
                 position: absolute;
-                height: min(50vw, 430px);
-                background: url('../../static/egg-colored.png') center;
+                background: url('../../static/egg-colored.png') no-repeat center center ;
+                background-size: contain;
+            }
+
+            &.hover {
+                position: absolute;
+                top: 0;
+                background: url('../../static/egg-hover.png') no-repeat center center ;
+                background-size: contain;
+                display: none;
+            }
+            
+            &.crack {
+                position: absolute;
+                display: none;
+            }
+            &.crack.c1 {
+                top: 0;
+                display: block;
+                position: absolute;
+                background: url('../../static/c1.png') no-repeat center center ;
+                background-size: contain;
+            }
+
+            &.crack.c2 {
+                top: 0;
+                display: block;
+                position: absolute;
+                background: url('../../static/c2.png') no-repeat center center ;
+                background-size: contain;
+            }
+
+            &.crack.c3 {
+                top: 0;
+                display: block;
+                position: absolute;
+                background: url('../../static/c3.png') no-repeat center center ;
+                background-size: contain;
+            }
+
+            &.crack.c4 {
+                top: 0;
+                display: block;
+                position: absolute;
+                background: url('../../static/c4.png') no-repeat center center ;
+                background-size: contain;
+            }
+
+            &.crack.c5 {
+                top: 0;
+                display: block;
+                position: absolute;
+                background: url('../../static/c5.png') no-repeat center center ;
+                background-size: contain;
+            }
+
+            &.crack.c6 {
+                top: 0;
+                display: block;
+                position: absolute;
+                background: url('../../static/c6.png') no-repeat center center ;
                 background-size: contain;
             }
         }
     
+    }
+
+    .players {
+        width: 80vw;
+        height: 23vh;
+        position: absolute;
+        bottom: 5vh;
+        left: 10vw;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
     
     .floor {
@@ -73,36 +164,11 @@
             left: 50%;
             transform: translateX(-60px);
 
-            animation: idle-shadow 2s steps(1) infinite;
+            animation: idle-shadow 1s steps(1) infinite;
         }
     }
     
-    .sprite {
-        position: absolute;
-        left: 12vw;
-        bottom: 10vh;
-        width: 206px;
-        height: 206px;
-        // overflow: hidden;
-        background: url('../../static/idle-sprite.png') top left;
-        
-        &.idle {
-            animation: idle 1s steps(1) infinite;
-            
-        }
-
-        .head {
-            position: absolute;
-            top: -75px;
-            left: 30px;
-            width: 105px;
-            height: 130px;
-            background: url('../../static/heads/troy.png');
-            // border-radius: 50%;
-            transform-origin: bottom;
-            animation: idle-head 1s steps(1) infinite;
-        }
-    }
+    
     
     @keyframes idle-shadow {
         0%, 100% {transform: translateX(-60px) scaleX(1);}
@@ -113,22 +179,20 @@
         0%, 100% {transform: translate(-50%,-50%);}
         50% {transform: translate(-50%,-51%);}
     }
-    
-    @keyframes idle-head {
-        0%, 100% {transform: translate(0px,0px) rotate(0deg);}
-        50% {transform: translate(-5px,5px) rotate(3deg);}
+
+
+    @keyframes wiggle-egg {
+        0% {transform: translate(-50%,-50%) rotate(-10deg);}
+        33% {transform: translate(-50%,-50%) rotate(7deg);}
+        66% {transform: translate(-50%,-50%) rotate(-3deg);}
+        100% {transform: translate(-50%,-50%) rotate(0deg);}
     }
-    
-    @keyframes idle {
-        0%, 100% {background-position: 0 0;}
-        50% {background-position: -100% 0;}
-    }
-    
-    @keyframes grain {
-        0%, 100% {transform: rotate(0deg);}
-        25% {transform: rotate(180deg);}
-        50% {transform: rotate(90deg);}
-        75% {transform: rotate(270deg);}
+
+    @keyframes boil-egg {
+        0% {transform: translate(-50%,-50%) rotate(-5deg);}
+        33% {transform: translate(-50%,-50%) rotate(5deg);}
+        66% {transform: translate(-50%,-50%) rotate(-5deg);}
+        100% {transform: translate(-50%,-50%) rotate(5deg);}
     }
 
 }
