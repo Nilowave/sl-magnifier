@@ -3,7 +3,7 @@ import React from 'react';
 import Game from '../Game/Game';
 import UI from '../UI/UI';
 
-import soundFile from '../../static/sing.mp3';
+import soundFile from '../../assets/sing.mp3';
 
 import './App.scss';
 
@@ -118,8 +118,8 @@ class App extends React.Component {
     }
 
     playSound() {
-        let sound = createjs.Sound.play("sing");
-        sound.volume = .3;
+        // let sound = createjs.Sound.play("sing");
+        // sound.volume = .3;
         this.setState({sound: false});
 
         let text = new SplitText(".loading h1", { type: "chars" });

@@ -5,7 +5,7 @@
         width: 15%;
         height: 0;
         padding-bottom: 15%;
-        background: url('../../static/idle-sprite.png') top left no-repeat;
+        background: url('../../assets/idle-sprite.png') top left no-repeat;
         background-position: 0 0;
         background-size: 200%;
         position: relative;
@@ -26,77 +26,77 @@
             padding-bottom: 100%;
             height: 0;
             transform-origin: bottom;
-            background: url('../../static/heads/troy.png') top left no-repeat;
+            background: url('../../assets/heads/troy.png') top left no-repeat;
             background-size: 100%;
             
             animation: idle-head 1s steps(1) infinite;
             
             &.Troy {
-                background: url('../../static/heads/troy.png') top left no-repeat;                
+                background: url('../../assets/heads/troy.png') top left no-repeat;                
                 background-size: 100%;
             }
             &.Alison {
-                background: url('../../static/heads/alison.png') top left no-repeat;
+                background: url('../../assets/heads/alison.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Junior {
-                background: url('../../static/heads/junior.png') top left no-repeat;
+                background: url('../../assets/heads/junior.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Sombra {
-                background: url('../../static/heads/sombra.png') top left no-repeat;
+                background: url('../../assets/heads/sombra.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Yusaku {
-                background: url('../../static/heads/yusaku.png') top left no-repeat;
+                background: url('../../assets/heads/yusaku.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Kit {
-                background: url('../../static/heads/kit.png') top left no-repeat;
+                background: url('../../assets/heads/kit.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Sean {
-                background: url('../../static/heads/sean.png') top left no-repeat;
+                background: url('../../assets/heads/sean.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Akiko {
-                background: url('../../static/heads/akiko.png') top left no-repeat;
+                background: url('../../assets/heads/akiko.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Michael {
-                background: url('../../static/heads/michael.png') top left no-repeat;
+                background: url('../../assets/heads/michael.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Kelvin {
-                background: url('../../static/heads/kelvin.png') top left no-repeat;
+                background: url('../../assets/heads/kelvin.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Pete {
-                background: url('../../static/heads/pete.png') top left no-repeat;
+                background: url('../../assets/heads/pete.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Tyler {
-                background: url('../../static/heads/tyler.png') top left no-repeat;
+                background: url('../../assets/heads/tyler.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Noelle {
-                background: url('../../static/heads/noelle.png') top left no-repeat;
+                background: url('../../assets/heads/noelle.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Kristina {
-                background: url('../../static/heads/kristina.png') top left no-repeat;
+                background: url('../../assets/heads/kristina.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Kayla {
-                background: url('../../static/heads/kayla.png') top left no-repeat;
+                background: url('../../assets/heads/kayla.png') top left no-repeat;
                 background-size: 100%;
             }
             &.James {
-                background: url('../../static/heads/james.png') top left no-repeat;
+                background: url('../../assets/heads/james.png') top left no-repeat;
                 background-size: 100%;
             }
             &.Vinny {
-                background: url('../../static/heads/vinny.png') top left no-repeat;
+                background: url('../../assets/heads/vinny.png') top left no-repeat;
                 background-size: 100%;
             }
         }

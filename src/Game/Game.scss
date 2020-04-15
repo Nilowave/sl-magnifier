@@ -7,6 +7,21 @@
     top: 0;
     left: 0;
 
+    .flash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        pointer-events: none;
+        opacity: 0;
+
+        &.play {
+            animation: flash .2s;
+        }
+    }
+
     .egg-container {
         position: absolute;
         width: 100vw;
@@ -44,7 +59,7 @@
                 }
 
                 .egg {
-                    background: url('../../static/egg-cracked.png') no-repeat center center ;
+                    background: url('../../assets/egg-cracked.png') no-repeat center center ;
                     background-size: contain;
                 }
             }
@@ -58,26 +73,26 @@
                 left: 30%;
 
                 &.hammer {
-                    cursor: url('../../static/cursor-hammer.png'), pointer !important;
+                    cursor: url('../../assets/cursor-hammer.png'), pointer !important;
                     
                     &:active {
-                        cursor: url('../../static/cursor-hammer-tap.png'), pointer !important;
+                        cursor: url('../../assets/cursor-hammer-tap.png'), pointer !important;
                     }
                 }
 
                 &.spoon {
-                    cursor: url('../../static/cursor-spoon.png'), pointer !important;
+                    cursor: url('../../assets/cursor-spoon.png'), pointer !important;
                     
                     &:active {
-                        cursor: url('../../static/cursor-spoon-tap.png'), pointer !important;
+                        cursor: url('../../assets/cursor-spoon-tap.png'), pointer !important;
                     }
                 }
 
                 &.cottoncandy {
-                    cursor: url('../../static/cursor-candy.png'), pointer !important;
+                    cursor: url('../../assets/cursor-candy.png'), pointer !important;
                     
                     &:active {
-                        cursor: url('../../static/cursor-candy-tap.png'), pointer !important;
+                        cursor: url('../../assets/cursor-candy-tap.png'), pointer !important;
                     }
                 }
             }
@@ -97,21 +112,21 @@
             position: relative;
             pointer-events: none;
 
-            background: url('../../static/egg-grey.png') no-repeat center center ;
+            background: url('../../assets/egg-grey.png') no-repeat center center ;
             background-size: contain;
     
             &.colored {
                 bottom: 0;
                 left: 0;
                 position: absolute;
-                background: url('../../static/egg-colored.png') no-repeat center center ;
+                background: url('../../assets/egg-colored.png') no-repeat center center ;
                 background-size: contain;
             }
 
             &.hover {
                 position: absolute;
                 top: 0;
-                background: url('../../static/egg-hover.png') no-repeat center center ;
+                background: url('../../assets/egg-hover.png') no-repeat center center ;
                 background-size: contain;
                 display: none;
             }
@@ -125,7 +140,7 @@
                 top: 0;
                 display: block;
                 position: absolute;
-                background: url('../../static/c1.png') no-repeat center center ;
+                background: url('../../assets/c1.png') no-repeat center center ;
                 background-size: contain;
             }
 
@@ -133,7 +148,7 @@
                 top: 0;
                 display: block;
                 position: absolute;
-                background: url('../../static/c2.png') no-repeat center center ;
+                background: url('../../assets/c2.png') no-repeat center center ;
                 background-size: contain;
             }
 
@@ -141,7 +156,7 @@
                 top: 0;
                 display: block;
                 position: absolute;
-                background: url('../../static/c3.png') no-repeat center center ;
+                background: url('../../assets/c3.png') no-repeat center center ;
                 background-size: contain;
             }
 
@@ -149,7 +164,7 @@
                 top: 0;
                 display: block;
                 position: absolute;
-                background: url('../../static/c4.png') no-repeat center center ;
+                background: url('../../assets/c4.png') no-repeat center center ;
                 background-size: contain;
             }
 
@@ -157,7 +172,7 @@
                 top: 0;
                 display: block;
                 position: absolute;
-                background: url('../../static/c5.png') no-repeat center center ;
+                background: url('../../assets/c5.png') no-repeat center center ;
                 background-size: contain;
             }
 
@@ -165,7 +180,7 @@
                 top: 0;
                 display: block;
                 position: absolute;
-                background: url('../../static/c6.png') no-repeat center center ;
+                background: url('../../assets/c6.png') no-repeat center center ;
                 background-size: contain;
             }
         }
@@ -207,7 +222,10 @@
         }
     }
     
-    
+    @keyframes flash {
+        0% { opacity:1;}
+        0% { opacity:0;}
+    }
     
     @keyframes idle-shadow {
         0%, 100% {transform: translateX(-60px) scaleX(1);}

@@ -28357,7 +28357,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../static/idle-sprite.png":[["idle-sprite.611d6ddf.png","static/idle-sprite.png"],"static/idle-sprite.png"],"./../../static/heads/troy.png":[["troy.f3eeeda6.png","static/heads/troy.png"],"static/heads/troy.png"],"./../../static/heads/alison.png":[["alison.e807f150.png","static/heads/alison.png"],"static/heads/alison.png"],"./../../static/heads/junior.png":[["junior.91091476.png","static/heads/junior.png"],"static/heads/junior.png"],"./../../static/heads/sombra.png":[["sombra.a8af00f6.png","static/heads/sombra.png"],"static/heads/sombra.png"],"./../../static/heads/yusaku.png":[["yusaku.f2c90eaf.png","static/heads/yusaku.png"],"static/heads/yusaku.png"],"./../../static/heads/kit.png":[["kit.29c9f670.png","static/heads/kit.png"],"static/heads/kit.png"],"./../../static/heads/sean.png":[["sean.81a68c8e.png","static/heads/sean.png"],"static/heads/sean.png"],"./../../static/heads/akiko.png":[["akiko.6e4afdb4.png","static/heads/akiko.png"],"static/heads/akiko.png"],"./../../static/heads/michael.png":[["michael.527e7c33.png","static/heads/michael.png"],"static/heads/michael.png"],"./../../static/heads/kelvin.png":[["kelvin.b119eba6.png","static/heads/kelvin.png"],"static/heads/kelvin.png"],"./../../static/heads/pete.png":[["pete.b11c00eb.png","static/heads/pete.png"],"static/heads/pete.png"],"./../../static/heads/tyler.png":[["tyler.1e3e9e21.png","static/heads/tyler.png"],"static/heads/tyler.png"],"./../../static/heads/noelle.png":[["noelle.4b3843c9.png","static/heads/noelle.png"],"static/heads/noelle.png"],"./../../static/heads/kristina.png":[["kristina.2df797d1.png","static/heads/kristina.png"],"static/heads/kristina.png"],"./../../static/heads/kayla.png":[["kayla.f0b48fa8.png","static/heads/kayla.png"],"static/heads/kayla.png"],"./../../static/heads/james.png":[["james.db64e6db.png","static/heads/james.png"],"static/heads/james.png"],"./../../static/heads/vinny.png":[["vinny.ce045012.png","static/heads/vinny.png"],"static/heads/vinny.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
+},{"./../../assets/idle-sprite.png":[["idle-sprite.720d9748.png","assets/idle-sprite.png"],"assets/idle-sprite.png"],"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28428,7 +28428,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../static/egg-cracked.png":[["egg-cracked.a77afcb6.png","static/egg-cracked.png"],"static/egg-cracked.png"],"./../../static/cursor-hammer.png":[["cursor-hammer.85129d2e.png","static/cursor-hammer.png"],"static/cursor-hammer.png"],"./../../static/cursor-hammer-tap.png":[["cursor-hammer-tap.d798a1ff.png","static/cursor-hammer-tap.png"],"static/cursor-hammer-tap.png"],"./../../static/cursor-spoon.png":[["cursor-spoon.e5cbd6c0.png","static/cursor-spoon.png"],"static/cursor-spoon.png"],"./../../static/cursor-spoon-tap.png":[["cursor-spoon-tap.f5cc1d78.png","static/cursor-spoon-tap.png"],"static/cursor-spoon-tap.png"],"./../../static/cursor-candy.png":[["cursor-candy.90072026.png","static/cursor-candy.png"],"static/cursor-candy.png"],"./../../static/cursor-candy-tap.png":[["cursor-candy-tap.4ae8bf85.png","static/cursor-candy-tap.png"],"static/cursor-candy-tap.png"],"./../../static/egg-grey.png":[["egg-grey.150d39cf.png","static/egg-grey.png"],"static/egg-grey.png"],"./../../static/egg-colored.png":[["egg-colored.0bee9e28.png","static/egg-colored.png"],"static/egg-colored.png"],"./../../static/egg-hover.png":[["egg-hover.c7513655.png","static/egg-hover.png"],"static/egg-hover.png"],"./../../static/c1.png":[["c1.ce52a800.png","static/c1.png"],"static/c1.png"],"./../../static/c2.png":[["c2.21c347f3.png","static/c2.png"],"static/c2.png"],"./../../static/c3.png":[["c3.3f383a34.png","static/c3.png"],"static/c3.png"],"./../../static/c4.png":[["c4.78e6e573.png","static/c4.png"],"static/c4.png"],"./../../static/c5.png":[["c5.5dade82e.png","static/c5.png"],"static/c5.png"],"./../../static/c6.png":[["c6.1b9e1cc5.png","static/c6.png"],"static/c6.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Game.js":[function(require,module,exports) {
+},{"./../../assets/egg-cracked.png":[["egg-cracked.58773717.png","assets/egg-cracked.png"],"assets/egg-cracked.png"],"./../../assets/cursor-hammer.png":[["cursor-hammer.35b3de64.png","assets/cursor-hammer.png"],"assets/cursor-hammer.png"],"./../../assets/cursor-hammer-tap.png":[["cursor-hammer-tap.ae823bb5.png","assets/cursor-hammer-tap.png"],"assets/cursor-hammer-tap.png"],"./../../assets/cursor-spoon.png":[["cursor-spoon.ed141df2.png","assets/cursor-spoon.png"],"assets/cursor-spoon.png"],"./../../assets/cursor-spoon-tap.png":[["cursor-spoon-tap.79cc69f1.png","assets/cursor-spoon-tap.png"],"assets/cursor-spoon-tap.png"],"./../../assets/cursor-candy.png":[["cursor-candy.0272d891.png","assets/cursor-candy.png"],"assets/cursor-candy.png"],"./../../assets/cursor-candy-tap.png":[["cursor-candy-tap.31ff5314.png","assets/cursor-candy-tap.png"],"assets/cursor-candy-tap.png"],"./../../assets/egg-grey.png":[["egg-grey.e1b52926.png","assets/egg-grey.png"],"assets/egg-grey.png"],"./../../assets/egg-colored.png":[["egg-colored.50ae3dd9.png","assets/egg-colored.png"],"assets/egg-colored.png"],"./../../assets/egg-hover.png":[["egg-hover.0d57a8b1.png","assets/egg-hover.png"],"assets/egg-hover.png"],"./../../assets/c1.png":[["c1.f221c4c3.png","assets/c1.png"],"assets/c1.png"],"./../../assets/c2.png":[["c2.ec351a5b.png","assets/c2.png"],"assets/c2.png"],"./../../assets/c3.png":[["c3.1a54b803.png","assets/c3.png"],"assets/c3.png"],"./../../assets/c4.png":[["c4.0c506cd3.png","assets/c4.png"],"assets/c4.png"],"./../../assets/c5.png":[["c5.11072ea6.png","assets/c5.png"],"assets/c5.png"],"./../../assets/c6.png":[["c6.543e122e.png","assets/c6.png"],"assets/c6.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28527,15 +28527,35 @@ var Game = /*#__PURE__*/function (_React$Component) {
       this.egg.current.classList.remove("idle");
       this.egg.current.classList.remove("wiggle");
       this.egg.current.classList.remove("boil");
-      this.egg.current.classList.add("cracked"); // gsap.ticker.fps(8);
+      this.egg.current.classList.add("cracked"); // document.querySelector(".flash").classList.add("play");
+      // gsap.ticker.fps(8);
 
-      gsap.to([".players", ".floor", ".egg-container"], {
+      var endGameTL = gsap.timeline();
+      endGameTL.set(".flash", {
+        opacity: 1
+      });
+      endGameTL.to(".flash", {
+        duration: .6,
+        opacity: 0,
+        ease: Expo.easeOut
+      }, "start");
+      endGameTL.to(this.egg.current, {
+        duration: .8,
+        y: "10vh",
+        ease: Bounce.easeOut
+      }, "start");
+      endGameTL.to(".players", {
         duration: 1,
         y: "70vh",
         scale: 1.2,
-        ease: Expo.easeIn,
-        stagger: .3
-      });
+        ease: Expo.easeIn
+      }, "start+=.5");
+      endGameTL.to([".floor", ".egg-container"], {
+        duration: 1,
+        y: "70vh",
+        scale: 1.2,
+        ease: Expo.easeIn
+      }, "start+=.7");
     }
   }, {
     key: "render",
@@ -28548,6 +28568,10 @@ var Game = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "game"
       }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "floor"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "shadow"
+      })), /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-container"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-wrapper idle",
@@ -28572,10 +28596,6 @@ var Game = /*#__PURE__*/function (_React$Component) {
         onMouseOver: this.onMouseOver,
         onMouseOut: this.onMouseOut
       }))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "floor"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "shadow"
-      })), /*#__PURE__*/_react.default.createElement("div", {
         className: "grad"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "players"
@@ -28589,7 +28609,9 @@ var Game = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/_react.default.createElement("div", {
           className: "head " + p.name
         }));
-      })));
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "flash"
+      }));
     }
   }]);
 
@@ -28603,7 +28625,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../static/hammer.png":[["hammer.134fb1ff.png","static/hammer.png"],"static/hammer.png"],"./../../static/spoon.png":[["spoon.943753f4.png","static/spoon.png"],"static/spoon.png"],"./../../static/candy.png":[["candy.a5cb4082.png","static/candy.png"],"static/candy.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/UI/UI.js":[function(require,module,exports) {
+},{"./../../assets/hammer.png":[["hammer.4d1417ad.png","assets/hammer.png"],"assets/hammer.png"],"./../../assets/spoon.png":[["spoon.7a8235b3.png","assets/spoon.png"],"assets/spoon.png"],"./../../assets/candy.png":[["candy.a9be4af4.png","assets/candy.png"],"assets/candy.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/UI/UI.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28954,14 +28976,14 @@ Array.prototype.remove = function () {
 
 var _default = UI;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./UI.scss":"src/UI/UI.scss"}],"static/sing.mp3":[function(require,module,exports) {
-module.exports = "/sing.ce8ac113.mp3";
+},{"react":"node_modules/react/index.js","./UI.scss":"src/UI/UI.scss"}],"assets/sing.mp3":[function(require,module,exports) {
+module.exports = "/sing.8dd8d9e9.mp3";
 },{}],"src/App/App.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../static/grain.png":[["grain.f60b5153.png","static/grain.png"],"static/grain.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parseuri/index.js":[function(require,module,exports) {
+},{"./../../assets/grain.png":[["grain.61592de5.png","assets/grain.png"],"assets/grain.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parseuri/index.js":[function(require,module,exports) {
 /**
  * Parses an URI
  *
@@ -38089,7 +38111,7 @@ var _Game = _interopRequireDefault(require("../Game/Game"));
 
 var _UI = _interopRequireDefault(require("../UI/UI"));
 
-var _sing = _interopRequireDefault(require("../../static/sing.mp3"));
+var _sing = _interopRequireDefault(require("../../assets/sing.mp3"));
 
 require("./App.scss");
 
@@ -38179,6 +38201,10 @@ var App = /*#__PURE__*/function (_React$Component) {
         console.log("is plaer ready???", this.state.player);
         this.tryReconnect();
       }
+
+      if (this.state.sound) {
+        console.log("play sound !!");
+      }
     }
   }, {
     key: "handleClick",
@@ -38243,8 +38269,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function playSound() {
       var _this2 = this;
 
-      var sound = createjs.Sound.play("sing");
-      sound.volume = .3;
+      // let sound = createjs.Sound.play("sing");
+      // sound.volume = .3;
       this.setState({
         sound: false
       });
@@ -38293,7 +38319,7 @@ var App = /*#__PURE__*/function (_React$Component) {
         ref: this.game
       }), this.state.start === undefined && /*#__PURE__*/_react.default.createElement("div", {
         className: "loading"
-      }, /*#__PURE__*/_react.default.createElement("h1", null, "Are you ready?"), this.state.sound && /*#__PURE__*/_react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("h1", null, "Is your sound on?"), this.state.sound && /*#__PURE__*/_react.default.createElement("p", {
         onClick: this.playSound
       }, "Yes!")), this.state.start === false && /*#__PURE__*/_react.default.createElement(_UI.default, {
         startGame: this.startGame,
@@ -38308,7 +38334,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Game/Game":"src/Game/Game.js","../UI/UI":"src/UI/UI.js","../../static/sing.mp3":"static/sing.mp3","./App.scss":"src/App/App.scss","../api":"src/api.js"}],"src/reset.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Game/Game":"src/Game/Game.js","../UI/UI":"src/UI/UI.js","../../assets/sing.mp3":"assets/sing.mp3","./App.scss":"src/App/App.scss","../api":"src/api.js"}],"src/reset.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -38360,7 +38386,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56046" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61301" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
