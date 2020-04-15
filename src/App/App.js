@@ -3,6 +3,8 @@ import React from 'react';
 import Game from '../Game/Game';
 import UI from '../UI/UI';
 
+import soundFile from '../../static/sing.mp3';
+
 import './App.scss';
 
 import { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame } from '../api';
@@ -106,7 +108,7 @@ class App extends React.Component {
             this.setState({start:true});
             this.startGame(player);
         } else {
-            console.log("no player match in mage")
+            console.log("no player match in mage");
             window.localStorage.clear();
         }
     }
@@ -128,7 +130,7 @@ class App extends React.Component {
         createjs.Sound.on("fileload", (e) => {
             this.setState({sound:true});
         }, this);
-        createjs.Sound.registerSound("../../static/sing.mp3", "sing");
+        createjs.Sound.registerSound(soundFile, "sing");
     }
 
     render() {
