@@ -61,6 +61,10 @@ class App extends React.Component {
             console.log("is plaer ready???",this.state.player)
             this.tryReconnect();
         }
+
+        if(this.state.sound) {
+            console.log("play sound !!")
+        }
     }
 
     handleClick(e) {
@@ -143,7 +147,7 @@ class App extends React.Component {
                 
                 {this.state.start === undefined && (
                     <div className="loading">
-                        <h1>Are you ready?</h1>
+                        <h1>Is your sound on?</h1>
                         {this.state.sound && (
                             <p onClick={this.playSound}>Yes!</p>
                         )}
