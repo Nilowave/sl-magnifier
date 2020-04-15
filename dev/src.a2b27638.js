@@ -38035,7 +38035,11 @@ var _socket = _interopRequireDefault(require("socket.io-client"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var socket = (0, _socket.default)('http://localhost:3000');
+var socket = (0, _socket.default)('https://sl-magnifier.herokuapp.com');
+
+if ("development" === 'development') {
+  socket = (0, _socket.default)('http://localhost:3000');
+}
 
 function socketOnConnect(callback) {
   socket.on('update egg', function (data) {
@@ -38356,7 +38360,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64819" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56046" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

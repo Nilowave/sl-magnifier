@@ -1,5 +1,9 @@
 import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:3000');
+
+let socket = openSocket('https://sl-magnifier.herokuapp.com');
+if (process.env.NODE_ENV === 'development') { 
+    socket = openSocket('http://localhost:3000');
+}
 
 function socketOnConnect(callback) {
     
