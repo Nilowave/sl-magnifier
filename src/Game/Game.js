@@ -11,6 +11,7 @@ class Game extends React.Component {
         this.onMouseOver = this.onMouseOver.bind(this);
         this.onMouseOut = this.onMouseOut.bind(this);
         this.onClick = this.onClick.bind(this);
+        this.runEndGame = this.runEndGame.bind(this);
 
         this.egg = React.createRef();
         this.crack = React.createRef();
@@ -32,13 +33,13 @@ class Game extends React.Component {
         
         if (this.props.progress >= 60) {
             clearTimeout(this.eggTabDelay);
-            this.egg.current.classList.remove("idel");
+            this.egg.current.classList.remove("idle");
             this.egg.current.classList.remove("wiggle");
             this.egg.current.classList.add("boil");
             return
         }
 
-        this.egg.current.classList.remove("idel");
+        this.egg.current.classList.remove("idle");
         this.egg.current.classList.add("wiggle");
 
         if (this.eggTabDelay) clearTimeout(this.eggTabDelay);
@@ -47,7 +48,18 @@ class Game extends React.Component {
 
     stopEggWiggle() {
         this.egg.current.classList.remove("wiggle");
-        this.egg.current.classList.add("idel");
+        this.egg.current.classList.add("idle");
+    }
+
+    runEndGame(data) {
+        this.egg.current.classList.remove("idle");
+        this.egg.current.classList.remove("wiggle");
+        this.egg.current.classList.remove("boil");
+        this.egg.current.classList.add("cracked");
+
+        // gsap.ticker.fps(8);
+        gsap.to([".players",".floor",".egg-container"], {duration: 1, y: "70vh", scale:1.2, ease: Expo.easeIn, stagger:.3});
+        
     }
 
     render() {
@@ -56,6 +68,8 @@ class Game extends React.Component {
         let crackClass = crack > 0 ? "c"+crack : "";
         crackClass = crack < 7 ? crackClass : "c6";
 
+        let weapon = this.props.player ? this.props.player.weapon : "";
+        
         return (
             <div className="game">
                 
@@ -67,7 +81,7 @@ class Game extends React.Component {
                         </div>
                         <div className={"egg crack "+crackClass} ref={this.crack}></div>
                         <div className="egg hover"></div>
-                        <div className="tap" onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}></div>
+                        <div className={"tap " + weapon} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}></div>
                     </div>
                 </div>
 

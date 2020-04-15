@@ -125,7 +125,6 @@
   transform: translateX(-50%);
 }
 .game .egg-container .egg-wrapper {
-  cursor: pointer;
   position: relative;
   left: 50%;
   top: 50%;
@@ -142,6 +141,13 @@
 .game .egg-container .egg-wrapper.boil {
   animation: boil-egg 0.1s steps(1) infinite;
 }
+.game .egg-container .egg-wrapper.cracked .colored-wrapper, .game .egg-container .egg-wrapper.cracked .crack, .game .egg-container .egg-wrapper.cracked .hover, .game .egg-container .egg-wrapper.cracked .tap {
+  display: none !important;
+}
+.game .egg-container .egg-wrapper.cracked .egg {
+  background: url("/egg-cracked.a77afcb6.png") no-repeat center center;
+  background-size: contain;
+}
 .game .egg-container .egg-wrapper .tap {
   width: 40%;
   height: 50%;
@@ -149,6 +155,24 @@
   background-color: rgba(0, 0, 0, 0);
   top: 25%;
   left: 30%;
+}
+.game .egg-container .egg-wrapper .tap.hammer {
+  cursor: url("/cursor-hammer.85129d2e.png"), pointer !important;
+}
+.game .egg-container .egg-wrapper .tap.hammer:active {
+  cursor: url("/cursor-hammer-tap.d798a1ff.png"), pointer !important;
+}
+.game .egg-container .egg-wrapper .tap.spoon {
+  cursor: url("/cursor-spoon.e5cbd6c0.png"), pointer !important;
+}
+.game .egg-container .egg-wrapper .tap.spoon:active {
+  cursor: url("/cursor-spoon-tap.f5cc1d78.png"), pointer !important;
+}
+.game .egg-container .egg-wrapper .tap.cottoncandy {
+  cursor: url("/cursor-candy.90072026.png"), pointer !important;
+}
+.game .egg-container .egg-wrapper .tap.cottoncandy:active {
+  cursor: url("/cursor-candy-tap.4ae8bf85.png"), pointer !important;
 }
 .game .egg-container .colored-wrapper {
   position: absolute;
@@ -162,6 +186,7 @@
   width: min(50vw, 540px);
   height: min(50vw, 540px);
   position: relative;
+  pointer-events: none;
   background: url("/egg-grey.150d39cf.png") no-repeat center center;
   background-size: contain;
 }
@@ -182,6 +207,7 @@
 .game .egg-container .egg.crack {
   position: absolute;
   display: none;
+  pointer-events: none;
 }
 .game .egg-container .egg.crack.c1 {
   top: 0;
@@ -306,18 +332,17 @@
   top: 0;
   left: 0;
   background-color: #2a2a2a;
+  font-family: "Bangers", sans-serif;
 }
 .ui h1 {
   width: 100vw;
   color: white;
   text-align: center;
-  font-family: "Bangers", cursive;
   text-shadow: 5px 5px 0 #000;
 }
 .ui p {
   color: white;
   text-align: center;
-  font-family: "Bangers", cursive;
   text-shadow: 5px 5px 0 #000;
 }
 .ui .title {
@@ -358,7 +383,7 @@
   cursor: pointer;
 }
 .ui .names p:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 .ui .page2 .halt {
   font-size: 11vh !important;
@@ -407,6 +432,26 @@
   display: block;
   padding-bottom: 100%;
 }
+.ui .page3 .pt1 {
+  position: absolute;
+  font-size: 11vh;
+  top: 43vh;
+}
+.ui .page3 .pt2 {
+  position: absolute;
+  font-size: 35vh;
+  top: 6vh;
+}
+.ui .page3 .pt3 {
+  position: absolute;
+  font-size: 15vh;
+  top: 41vh;
+}
+.ui .page3 .pt4 {
+  position: absolute;
+  font-size: 40vh;
+  top: 56vh;
+}
 .app {
   width: 100vw;
   height: 100vh;
@@ -415,6 +460,35 @@
   top: 0;
   left: 0;
   background: radial-gradient(ellipse at center, #5f5f5f 0%, #2a2a2a 100%);
+}
+.app .loading {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+.app .loading h1 {
+  width: 100vw;
+  color: black;
+  text-align: center;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 10vh;
+  position: absolute;
+  top: 25vh;
+}
+.app .loading p {
+  width: 20vw;
+  color: black;
+  text-align: center;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 8vw;
+  position: absolute;
+  top: 40vh;
+  left: 40vw;
+  cursor: pointer;
+  border: solid 7px #000;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .app:after {
@@ -522,6 +596,7 @@ span, p, h1, h2, h3, div {
 }
 body {
   background-color: #2a2a2a;
+  font-family: "Bangers", sans-serif;
 }
 
 /*# sourceMappingURL=/src.a2b27638.css.map */

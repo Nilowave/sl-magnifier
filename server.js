@@ -17,7 +17,6 @@ let max = 100;
 
 let colors = ['red', 'blue', 'green'];
 let colorCount = 0;
-let color = colors[colorCount];
 
 
 let players = [];
@@ -78,6 +77,10 @@ io.on('connection', function (socket) {
         })
 
         // console.log(players)
+
+        max = players.length * 100;
+
+        console.log("max increased",max)
 
         io.emit('update players', players);
     });

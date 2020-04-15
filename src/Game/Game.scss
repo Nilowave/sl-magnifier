@@ -16,13 +16,15 @@
         transform: translateX(-50%);
         
         .egg-wrapper {
-            cursor: pointer;
+            
             position: relative;
             left: 50%;
             top: 50%;
             width: min(50vw, 540px);
             height: min(50vw, 540px);
             transform: translate(-50%,-50%);
+
+           
 
             &.idle {
                 animation: idle-egg 1s steps(1) infinite;    
@@ -36,6 +38,17 @@
                 animation: boil-egg .1s steps(1) infinite;    
             }
 
+            &.cracked {
+                .colored-wrapper, .crack, .hover, .tap {
+                    display: none !important;
+                }
+
+                .egg {
+                    background: url('../../static/egg-cracked.png') no-repeat center center ;
+                    background-size: contain;
+                }
+            }
+
             .tap {
                 width: 40%;
                 height: 50%;
@@ -43,6 +56,30 @@
                 background-color: rgba(0,0,0,0);
                 top: 25%;
                 left: 30%;
+
+                &.hammer {
+                    cursor: url('../../static/cursor-hammer.png'), pointer !important;
+                    
+                    &:active {
+                        cursor: url('../../static/cursor-hammer-tap.png'), pointer !important;
+                    }
+                }
+
+                &.spoon {
+                    cursor: url('../../static/cursor-spoon.png'), pointer !important;
+                    
+                    &:active {
+                        cursor: url('../../static/cursor-spoon-tap.png'), pointer !important;
+                    }
+                }
+
+                &.cottoncandy {
+                    cursor: url('../../static/cursor-candy.png'), pointer !important;
+                    
+                    &:active {
+                        cursor: url('../../static/cursor-candy-tap.png'), pointer !important;
+                    }
+                }
             }
         }
         .colored-wrapper {
@@ -58,6 +95,7 @@
             width: min(50vw, 540px);
             height: min(50vw, 540px);
             position: relative;
+            pointer-events: none;
 
             background: url('../../static/egg-grey.png') no-repeat center center ;
             background-size: contain;
@@ -81,6 +119,7 @@
             &.crack {
                 position: absolute;
                 display: none;
+                pointer-events: none;
             }
             &.crack.c1 {
                 top: 0;

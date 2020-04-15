@@ -6,19 +6,19 @@
     top: 0;
     left: 0;
     background-color: #2a2a2a;
+    font-family: 'Bangers', sans-serif;
 
     h1 {
         width: 100vw;
         color: white;
         text-align: center;
-        font-family: 'Bangers', cursive;
         text-shadow: 5px 5px 0 #000;
     }
 
     p {
         color: white;
         text-align: center;
-        font-family: 'Bangers', cursive;
+        // font-family: 'Bangers', cursive;
         text-shadow: 5px 5px 0 #000;
     }
 
@@ -65,7 +65,7 @@
             cursor: pointer;
 
             &:hover {
-                opacity: 1;
+                opacity: 1 !important;
             }
         }
 
@@ -129,6 +129,32 @@
                 display: block;
                 padding-bottom: 100%;
             }
+        }
+    }
+
+    .page3 {
+        .pt1 {
+            position: absolute;
+            font-size: 11vh;
+            top: 43vh;
+        }
+
+        .pt2 {
+            position: absolute;
+            font-size: 35vh;
+            top: 6vh;
+        }
+
+        .pt3 {
+            position: absolute;
+            font-size: 15vh;
+            top: 41vh;
+        }
+
+        .pt4 {
+            position: absolute;
+            font-size: 40vh;
+            top: 56vh;
         }
     }
 }

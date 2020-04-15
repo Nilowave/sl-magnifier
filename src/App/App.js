@@ -5,9 +5,9 @@ import UI from '../UI/UI';
 
 import './App.scss';
 
-import { connectSocket, clickEgg, startGame, endGame } from '../api';
+import { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame } from '../api';
 
-const AMMO = 2;
+const AMMO = 10;
 
 class App extends React.Component {
     
@@ -17,20 +17,24 @@ class App extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.startGame = this.startGame.bind(this);
         this.handleSocketResponse = this.handleSocketResponse.bind(this);
+        this.hideUI = this.hideUI.bind(this);
+        this.playSound = this.playSound.bind(this);
 
         this.state = {
             value: 0,
-            start: false,
             clicks: 0,
             players: [],
             endGame: false
         };
 
-        connectSocket(this.handleSocketResponse);
+        socketOnConnect(this.handleSocketResponse);
+
+        this.game = React.createRef();
 
     }
 
     handleSocketResponse(response) {
+        console.log("handleSocketResponse", response.type)
         switch(response.type) {
             case "update-egg":
                 this.setState({
@@ -51,7 +55,8 @@ class App extends React.Component {
                 break;
         }
 
-        if (response.type == "update-players" && !this.state.start) {
+        if (response.type == "update-players" && !this.state.player) {
+            console.log("is plaer ready???",this.state.player)
             this.tryReconnect();
         }
     }
@@ -67,43 +72,84 @@ class App extends React.Component {
             }
         })
 
-        clickEgg(AMMO);
+        socketOnEggClick(AMMO);
     }
 
     startGame(player) {
-        console.log("player", player)
-        this.setState({start:true, player: player});
-        startGame(player);
+        console.log("START GAME")
+        // console.log("player", player)
+        this.setState({player: player});
+        socketOnStartGame(player);
+    }
+
+    hideUI() {
+        this.setState({start:true});
     }
 
     runEndGame(data) {
         this.setState({
             ...this.state,
             endGame: true
-        })
-        endGame(this.state.player);
+        });
+
+        socketOnEndGame(this.state.player);
+
+        this.game.current.runEndGame();
     }
 
     tryReconnect() {
+        console.log("try reconnect")
         let player = JSON.parse(window.localStorage.getItem("sl-magnifier"));
         let match = this.state.players.filter(p => { console.log("p",p); return p.name == player.name})[0];
 
         if (match) {
+            this.setState({start:true});
             this.startGame(player);
         } else {
+            console.log("no player match in mage")
             window.localStorage.clear();
         }
     }
 
+    playSound() {
+        let sound = createjs.Sound.play("sing");
+        sound.volume = .3;
+        this.setState({sound: false});
+
+        let text = new SplitText(".loading h1", { type: "chars" });
+
+        gsap.to(text.chars, {duration: .6, y:"100vh", ease:Back.easeIn, stagger:.1, onComplete:(e) => {
+            this.setState({start: false});
+        }});
+    }
+
+    componentDidMount() {
+        createjs.Sound.alternateExtensions = ["mp3"];
+        createjs.Sound.on("fileload", (e) => {
+            this.setState({sound:true});
+        }, this);
+        createjs.Sound.registerSound("../../static/sing.mp3", "sing");
+    }
+
     render() {
-        // console.log(this.state.players)
+        console.log(this.state.player)
         return (
             <div className="app">
+                
                 <div className="grad"></div>
-                <Game onClick={this.handleClick} progress={this.state.value * 100} players={this.state.players} endGame={this.state.endGame} />
+                <Game onClick={this.handleClick} progress={this.state.value * 100} players={this.state.players} player={this.state.player} endGame={this.state.endGame} ref={this.game} />
+                
+                {this.state.start === undefined && (
+                    <div className="loading">
+                        <h1>Are you ready?</h1>
+                        {this.state.sound && (
+                            <p onClick={this.playSound}>Yes!</p>
+                        )}
+                    </div>
+                )}
 
-                {!this.state.start && (
-                    <UI onComplete={this.startGame} players={this.state.players} />
+                {this.state.start === false && (
+                    <UI startGame={this.startGame} players={this.state.players} hideUI={this.hideUI} />
                 )}
             </div>
         )

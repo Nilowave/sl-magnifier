@@ -28428,7 +28428,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../static/egg-grey.png":[["egg-grey.150d39cf.png","static/egg-grey.png"],"static/egg-grey.png"],"./../../static/egg-colored.png":[["egg-colored.0bee9e28.png","static/egg-colored.png"],"static/egg-colored.png"],"./../../static/egg-hover.png":[["egg-hover.c7513655.png","static/egg-hover.png"],"static/egg-hover.png"],"./../../static/c1.png":[["c1.ce52a800.png","static/c1.png"],"static/c1.png"],"./../../static/c2.png":[["c2.21c347f3.png","static/c2.png"],"static/c2.png"],"./../../static/c3.png":[["c3.3f383a34.png","static/c3.png"],"static/c3.png"],"./../../static/c4.png":[["c4.78e6e573.png","static/c4.png"],"static/c4.png"],"./../../static/c5.png":[["c5.5dade82e.png","static/c5.png"],"static/c5.png"],"./../../static/c6.png":[["c6.1b9e1cc5.png","static/c6.png"],"static/c6.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Game.js":[function(require,module,exports) {
+},{"./../../static/egg-cracked.png":[["egg-cracked.a77afcb6.png","static/egg-cracked.png"],"static/egg-cracked.png"],"./../../static/cursor-hammer.png":[["cursor-hammer.85129d2e.png","static/cursor-hammer.png"],"static/cursor-hammer.png"],"./../../static/cursor-hammer-tap.png":[["cursor-hammer-tap.d798a1ff.png","static/cursor-hammer-tap.png"],"static/cursor-hammer-tap.png"],"./../../static/cursor-spoon.png":[["cursor-spoon.e5cbd6c0.png","static/cursor-spoon.png"],"static/cursor-spoon.png"],"./../../static/cursor-spoon-tap.png":[["cursor-spoon-tap.f5cc1d78.png","static/cursor-spoon-tap.png"],"static/cursor-spoon-tap.png"],"./../../static/cursor-candy.png":[["cursor-candy.90072026.png","static/cursor-candy.png"],"static/cursor-candy.png"],"./../../static/cursor-candy-tap.png":[["cursor-candy-tap.4ae8bf85.png","static/cursor-candy-tap.png"],"static/cursor-candy-tap.png"],"./../../static/egg-grey.png":[["egg-grey.150d39cf.png","static/egg-grey.png"],"static/egg-grey.png"],"./../../static/egg-colored.png":[["egg-colored.0bee9e28.png","static/egg-colored.png"],"static/egg-colored.png"],"./../../static/egg-hover.png":[["egg-hover.c7513655.png","static/egg-hover.png"],"static/egg-hover.png"],"./../../static/c1.png":[["c1.ce52a800.png","static/c1.png"],"static/c1.png"],"./../../static/c2.png":[["c2.21c347f3.png","static/c2.png"],"static/c2.png"],"./../../static/c3.png":[["c3.3f383a34.png","static/c3.png"],"static/c3.png"],"./../../static/c4.png":[["c4.78e6e573.png","static/c4.png"],"static/c4.png"],"./../../static/c5.png":[["c5.5dade82e.png","static/c5.png"],"static/c5.png"],"./../../static/c6.png":[["c6.1b9e1cc5.png","static/c6.png"],"static/c6.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28480,6 +28480,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
     _this.onMouseOver = _this.onMouseOver.bind(_assertThisInitialized(_this));
     _this.onMouseOut = _this.onMouseOut.bind(_assertThisInitialized(_this));
     _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
+    _this.runEndGame = _this.runEndGame.bind(_assertThisInitialized(_this));
     _this.egg = _react.default.createRef();
     _this.crack = _react.default.createRef();
     return _this;
@@ -28503,13 +28504,13 @@ var Game = /*#__PURE__*/function (_React$Component) {
 
       if (this.props.progress >= 60) {
         clearTimeout(this.eggTabDelay);
-        this.egg.current.classList.remove("idel");
+        this.egg.current.classList.remove("idle");
         this.egg.current.classList.remove("wiggle");
         this.egg.current.classList.add("boil");
         return;
       }
 
-      this.egg.current.classList.remove("idel");
+      this.egg.current.classList.remove("idle");
       this.egg.current.classList.add("wiggle");
       if (this.eggTabDelay) clearTimeout(this.eggTabDelay);
       this.eggTabDelay = setTimeout(this.stopEggWiggle.bind(this), 500);
@@ -28518,7 +28519,23 @@ var Game = /*#__PURE__*/function (_React$Component) {
     key: "stopEggWiggle",
     value: function stopEggWiggle() {
       this.egg.current.classList.remove("wiggle");
-      this.egg.current.classList.add("idel");
+      this.egg.current.classList.add("idle");
+    }
+  }, {
+    key: "runEndGame",
+    value: function runEndGame(data) {
+      this.egg.current.classList.remove("idle");
+      this.egg.current.classList.remove("wiggle");
+      this.egg.current.classList.remove("boil");
+      this.egg.current.classList.add("cracked"); // gsap.ticker.fps(8);
+
+      gsap.to([".players", ".floor", ".egg-container"], {
+        duration: 1,
+        y: "70vh",
+        scale: 1.2,
+        ease: Expo.easeIn,
+        stagger: .3
+      });
     }
   }, {
     key: "render",
@@ -28527,6 +28544,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
       var crack = Math.floor(this.props.progress / p);
       var crackClass = crack > 0 ? "c" + crack : "";
       crackClass = crack < 7 ? crackClass : "c6";
+      var weapon = this.props.player ? this.props.player.weapon : "";
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "game"
       }, /*#__PURE__*/_react.default.createElement("div", {
@@ -28550,7 +28568,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "egg hover"
       }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "tap",
+        className: "tap " + weapon,
         onMouseOver: this.onMouseOver,
         onMouseOut: this.onMouseOut
       }))), /*#__PURE__*/_react.default.createElement("div", {
@@ -28651,19 +28669,172 @@ var UI = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleWeaponClick",
     value: function handleWeaponClick(weapon) {
-      var data = {
-        name: this.state.name,
+      this.setState({
+        page: 3,
         weapon: weapon,
         clicks: 0
-      };
-      this.props.onComplete(data);
+      }); // this.props.onComplete(data);
+    }
+  }, {
+    key: "animatePage2",
+    value: function animatePage2() {
+      var splitTitle_1 = new SplitText("#title_2", {
+        type: "chars"
+      });
+      var splitText_2 = new SplitText("#text_3", {
+        type: "chars"
+      });
+      var splitText_3 = new SplitText("#text_4", {
+        type: "words"
+      });
+      var page2TL = gsap.timeline({});
+      page2TL.from(splitTitle_1.chars, {
+        duration: .4,
+        opacity: 0,
+        scale: 2,
+        x: 20,
+        y: -10,
+        stagger: .05,
+        ease: Expo.easeOut
+      }, "start");
+      page2TL.from(splitText_2.chars, {
+        duration: 2,
+        opacity: 0,
+        y: 20,
+        stagger: .05,
+        ease: Elastic.easeOut
+      }, "start+=.8");
+      page2TL.from("#line_2", {
+        duration: 4,
+        opacity: 0,
+        scaleX: 0
+      }, "start+=.8");
+      page2TL.from(splitText_3.words, {
+        duration: 2,
+        opacity: 0,
+        x: -20,
+        stagger: .1,
+        ease: Elastic.easeOut
+      }, "start+=3");
+      page2TL.from(".weapon", {
+        duration: 1.5,
+        opacity: 0,
+        y: "20vh",
+        stagger: .3,
+        ease: Expo.easeOut
+      }, "start+=5.5");
+    }
+  }, {
+    key: "animatePage3",
+    value: function animatePage3() {
+      var _this2 = this;
+
+      console.log("animate page 3");
+      this.props.startGame(this.state);
+      var pt1 = new SplitText("#pt1", {
+        type: "words"
+      });
+      var page3TL = gsap.timeline({
+        onComplete: function onComplete(e) {
+          console.log("test");
+
+          _this2.props.hideUI(_this2.state);
+        }
+      });
+      page3TL.from(pt1.words, {
+        duration: 3,
+        x: "100vw",
+        stagger: .5,
+        ease: Expo.easeOut
+      }, "start");
+      page3TL.to("#pt1", {
+        duration: 0.001,
+        opacity: 0
+      });
+      page3TL.from(".pt3_pt", {
+        duration: 0.001,
+        opacity: 0,
+        ease: "steps (1)",
+        stagger: 1
+      }, "start+=4");
+      page3TL.to(".ui", {
+        duration: 3,
+        opacity: 0,
+        ease: Quad.easeInOut,
+        delay: 3
+      });
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.page !== this.state.page && this.state.page == 2) {
+        this.animatePage2();
+      }
+
+      if (prevState.page !== this.state.page && this.state.page == 3) {
+        this.animatePage3();
+      }
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var splitTitle_1 = new SplitText("#title_1", {
+        type: "chars"
+      });
+      var splitText_2 = new SplitText("#text_1", {
+        type: "words"
+      });
+      var splitText_3 = new SplitText("#text_2", {
+        type: "words"
+      });
+      var names = Array.from(document.querySelectorAll(".player-name"));
+      names.sort(function (a, b) {
+        return 0.5 - Math.random();
+      });
+      var intro = gsap.timeline({
+        delay: .1
+      });
+      intro.from(splitTitle_1.chars, {
+        duration: .4,
+        opacity: 0,
+        scale: 1.2,
+        x: 10,
+        y: -10,
+        stagger: .1,
+        ease: Expo.easeOut
+      }, "start");
+      intro.from(splitText_2.words, {
+        duration: 1.5,
+        opacity: 0,
+        y: -15,
+        stagger: .2,
+        ease: Expo.easeOut
+      }, "start+=2");
+      intro.from("#line_1", {
+        duration: 5,
+        opacity: 0,
+        scaleX: 0
+      }, "start+=1");
+      intro.from(splitText_3.words, {
+        duration: .8,
+        opacity: 0,
+        y: -20,
+        stagger: .1,
+        ease: Bounce.easeOut
+      }, "start+=3.2");
+      intro.from(names, {
+        duration: .8,
+        opacity: 0,
+        stagger: .1,
+        ease: Elastic.easeOut
+      }, "start+=4.2");
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
-      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noëlle", "Kristina", "Kayla", "James", "Vinny"];
+      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny"];
       this.props.players.map(function (p) {
         names.remove(p.name);
         return p;
@@ -28679,20 +28850,26 @@ var UI = /*#__PURE__*/function (_React$Component) {
           }, /*#__PURE__*/_react.default.createElement("div", {
             className: "title"
           }, /*#__PURE__*/_react.default.createElement("h1", {
-            className: "halt"
-          }, "Halt!"), /*#__PURE__*/_react.default.createElement("h1", null, "Who goes there?")), /*#__PURE__*/_react.default.createElement("div", {
-            className: "line"
+            className: "halt",
+            id: "title_1"
+          }, "Halt!"), /*#__PURE__*/_react.default.createElement("h1", {
+            id: "text_1"
+          }, "Who goes there?")), /*#__PURE__*/_react.default.createElement("div", {
+            className: "line",
+            id: "line_1"
           }), /*#__PURE__*/_react.default.createElement("div", {
             className: "input"
           }, /*#__PURE__*/_react.default.createElement("h1", {
-            className: "answer"
+            className: "answer",
+            id: "text_2"
           }, "It is I..."), /*#__PURE__*/_react.default.createElement("div", {
             className: "names"
           }, names.map(function (n) {
             return /*#__PURE__*/_react.default.createElement("p", {
               key: n,
+              className: "player-name",
               onClick: function onClick(e) {
-                return _this2.handleNameClick(n);
+                return _this3.handleNameClick(n);
               },
               value: n
             }, n);
@@ -28705,24 +28882,47 @@ var UI = /*#__PURE__*/function (_React$Component) {
           }, /*#__PURE__*/_react.default.createElement("div", {
             className: "title"
           }, /*#__PURE__*/_react.default.createElement("h1", {
-            className: "halt"
-          }, "Splendid!"), /*#__PURE__*/_react.default.createElement("h1", null, "Welcome ", this.state.name, ".")), /*#__PURE__*/_react.default.createElement("div", {
-            className: "line"
+            className: "halt",
+            id: "title_2"
+          }, "Splendid!"), /*#__PURE__*/_react.default.createElement("h1", {
+            id: "text_3"
+          }, "Welcome ", this.state.name, ".")), /*#__PURE__*/_react.default.createElement("div", {
+            className: "line",
+            id: "line_2"
           }), /*#__PURE__*/_react.default.createElement("div", {
             className: "input"
           }, /*#__PURE__*/_react.default.createElement("h1", {
-            className: "answer"
-          }, "Please, choose your weapon of choice..."), /*#__PURE__*/_react.default.createElement("div", {
+            className: "answer",
+            id: "text_4"
+          }, "Please, select your weapon of choice..."), /*#__PURE__*/_react.default.createElement("div", {
             className: "weapons"
           }, weapons.map(function (w) {
             return /*#__PURE__*/_react.default.createElement("div", {
               key: w,
               className: "weapon ".concat(w),
               onClick: function onClick(e) {
-                _this2.handleWeaponClick(w);
+                _this3.handleWeaponClick(w);
               }
             });
           }))));
+          break;
+
+        case 3:
+          page = /*#__PURE__*/_react.default.createElement("div", {
+            className: "page3"
+          }, /*#__PURE__*/_react.default.createElement("h1", {
+            className: "pt1",
+            id: "pt1"
+          }, "Get ready to"), /*#__PURE__*/_react.default.createElement("h1", {
+            className: "pt2 pt3_pt",
+            id: "pt2"
+          }, "Crack"), /*#__PURE__*/_react.default.createElement("h1", {
+            className: "pt3 pt3_pt",
+            id: "pt3"
+          }, "the"), /*#__PURE__*/_react.default.createElement("h1", {
+            className: "pt4 pt3_pt",
+            id: "pt4"
+          }, "Egg"));
           break;
       }
 
@@ -37824,10 +38024,10 @@ exports.Socket = require('./socket');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.connectSocket = connectSocket;
-exports.clickEgg = clickEgg;
-exports.startGame = startGame;
-exports.endGame = endGame;
+exports.socketOnConnect = socketOnConnect;
+exports.socketOnEggClick = socketOnEggClick;
+exports.socketOnStartGame = socketOnStartGame;
+exports.socketOnEndGame = socketOnEndGame;
 
 var _socket = _interopRequireDefault(require("socket.io-client"));
 
@@ -37835,7 +38035,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var socket = (0, _socket.default)('http://localhost:3000');
 
-function connectSocket(callback) {
+function socketOnConnect(callback) {
   socket.on('update egg', function (data) {
     return callback({
       type: "update-egg",
@@ -37856,16 +38056,16 @@ function connectSocket(callback) {
   });
 }
 
-function clickEgg(value) {
+function socketOnEggClick(value) {
   socket.emit('click it', value);
 }
 
-function startGame(data) {
+function socketOnStartGame(data) {
   window.localStorage.setItem("sl-magnifier", JSON.stringify(data));
   socket.emit('start game', data);
 }
 
-function endGame(player) {
+function socketOnEndGame(player) {
   console.log("END GAME");
   socket.emit('end game', player);
 }
@@ -37917,7 +38117,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var AMMO = 2;
+var AMMO = 10;
 
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
@@ -37933,20 +38133,24 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     _this.startGame = _this.startGame.bind(_assertThisInitialized(_this));
     _this.handleSocketResponse = _this.handleSocketResponse.bind(_assertThisInitialized(_this));
+    _this.hideUI = _this.hideUI.bind(_assertThisInitialized(_this));
+    _this.playSound = _this.playSound.bind(_assertThisInitialized(_this));
     _this.state = {
       value: 0,
-      start: false,
       clicks: 0,
       players: [],
       endGame: false
     };
-    (0, _api.connectSocket)(_this.handleSocketResponse);
+    (0, _api.socketOnConnect)(_this.handleSocketResponse);
+    _this.game = _react.default.createRef();
     return _this;
   }
 
   _createClass(App, [{
     key: "handleSocketResponse",
     value: function handleSocketResponse(response) {
+      console.log("handleSocketResponse", response.type);
+
       switch (response.type) {
         case "update-egg":
           this.setState(_objectSpread({}, this.state, {}, response.data));
@@ -37963,7 +38167,8 @@ var App = /*#__PURE__*/function (_React$Component) {
           break;
       }
 
-      if (response.type == "update-players" && !this.state.start) {
+      if (response.type == "update-players" && !this.state.player) {
+        console.log("is plaer ready???", this.state.player);
         this.tryReconnect();
       }
     }
@@ -37977,17 +38182,24 @@ var App = /*#__PURE__*/function (_React$Component) {
           clicks: count
         })
       }));
-      (0, _api.clickEgg)(AMMO);
+      (0, _api.socketOnEggClick)(AMMO);
     }
   }, {
     key: "startGame",
     value: function startGame(player) {
-      console.log("player", player);
+      console.log("START GAME"); // console.log("player", player)
+
       this.setState({
-        start: true,
         player: player
       });
-      (0, _api.startGame)(player);
+      (0, _api.socketOnStartGame)(player);
+    }
+  }, {
+    key: "hideUI",
+    value: function hideUI() {
+      this.setState({
+        start: true
+      });
     }
   }, {
     key: "runEndGame",
@@ -37995,11 +38207,13 @@ var App = /*#__PURE__*/function (_React$Component) {
       this.setState(_objectSpread({}, this.state, {
         endGame: true
       }));
-      (0, _api.endGame)(this.state.player);
+      (0, _api.socketOnEndGame)(this.state.player);
+      this.game.current.runEndGame();
     }
   }, {
     key: "tryReconnect",
     value: function tryReconnect() {
+      console.log("try reconnect");
       var player = JSON.parse(window.localStorage.getItem("sl-magnifier"));
       var match = this.state.players.filter(function (p) {
         console.log("p", p);
@@ -38007,15 +38221,57 @@ var App = /*#__PURE__*/function (_React$Component) {
       })[0];
 
       if (match) {
+        this.setState({
+          start: true
+        });
         this.startGame(player);
       } else {
+        console.log("no player match in mage");
         window.localStorage.clear();
       }
     }
   }, {
+    key: "playSound",
+    value: function playSound() {
+      var _this2 = this;
+
+      var sound = createjs.Sound.play("sing");
+      sound.volume = .3;
+      this.setState({
+        sound: false
+      });
+      var text = new SplitText(".loading h1", {
+        type: "chars"
+      });
+      gsap.to(text.chars, {
+        duration: .6,
+        y: "100vh",
+        ease: Back.easeIn,
+        stagger: .1,
+        onComplete: function onComplete(e) {
+          _this2.setState({
+            start: false
+          });
+        }
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this3 = this;
+
+      createjs.Sound.alternateExtensions = ["mp3"];
+      createjs.Sound.on("fileload", function (e) {
+        _this3.setState({
+          sound: true
+        });
+      }, this);
+      createjs.Sound.registerSound("../../static/sing.mp3", "sing");
+    }
+  }, {
     key: "render",
     value: function render() {
-      // console.log(this.state.players)
+      console.log(this.state.player);
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "app"
       }, /*#__PURE__*/_react.default.createElement("div", {
@@ -38024,10 +38280,17 @@ var App = /*#__PURE__*/function (_React$Component) {
         onClick: this.handleClick,
         progress: this.state.value * 100,
         players: this.state.players,
-        endGame: this.state.endGame
-      }), !this.state.start && /*#__PURE__*/_react.default.createElement(_UI.default, {
-        onComplete: this.startGame,
-        players: this.state.players
+        player: this.state.player,
+        endGame: this.state.endGame,
+        ref: this.game
+      }), this.state.start === undefined && /*#__PURE__*/_react.default.createElement("div", {
+        className: "loading"
+      }, /*#__PURE__*/_react.default.createElement("h1", null, "Are you ready?"), this.state.sound && /*#__PURE__*/_react.default.createElement("p", {
+        onClick: this.playSound
+      }, "Yes!")), this.state.start === false && /*#__PURE__*/_react.default.createElement(_UI.default, {
+        startGame: this.startGame,
+        players: this.state.players,
+        hideUI: this.hideUI
       }));
     }
   }]);
@@ -38089,7 +38352,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56165" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64831" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
