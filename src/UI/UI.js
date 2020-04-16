@@ -112,7 +112,7 @@ class UI extends React.Component {
                         </div>
                         <div className="line" id="line_1"></div>
                         <div className="input">
-                            <h1 className="answer" id="text_2">It is I...</h1>
+                            <h1 className="answer" id="text_2">It is me...</h1>
                             <div className="names">
                                 {
                                     names.map(n => {

@@ -28479,30 +28479,85 @@ var End = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var endTL = gsap.timeline();
+      var circels = Array.from(document.querySelectorAll(".end .cc")).reverse();
+      var freeText = new SplitText(".end .text_1", {
+        type: "words"
+      });
+      var thankYou = new SplitText(".end .text_2", {
+        type: "chars"
+      });
+      var everyone = new SplitText(".end .text_3", {
+        type: "chars"
+      });
       endTL.from(".mg-container", {
         duration: 2,
         scale: .7,
         y: "20%",
         ease: Expo.easeOut,
-        delay: .1,
-        onComplete: function onComplete() {// document.querySelector(".mg").classList.add("wiggle");
-        }
-      });
+        delay: .1
+      }, "start");
+      endTL.from(freeText.words, {
+        duration: .4,
+        y: 20,
+        opacity: 0,
+        ease: Expo.easeOut,
+        stagger: .2
+      }, "start");
+      endTL.to(freeText.words, {
+        duration: .5,
+        opacity: 0,
+        ease: Quad.easeOut
+      }, "start+=1.5");
+      endTL.from(circels, {
+        duration: 3,
+        opacity: 0,
+        scale: 1.2,
+        ease: Elastic.easeOut,
+        stagger: .1
+      }, "start+=2.5");
+      endTL.from(thankYou.chars, {
+        duration: .5,
+        opacity: 0,
+        scale: 1.2,
+        ease: Expo.easeOut,
+        stagger: .1
+      }, "start+=5");
+      endTL.from(everyone.chars, {
+        duration: .5,
+        opacity: 0,
+        scale: 1.2,
+        ease: Expo.easeOut,
+        stagger: .1
+      }, "start+=6.5");
     }
   }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "end"
-      }, /*#__PURE__*/_react.default.createElement("h1", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "circles"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "cc circle_1"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "cc circle_2"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "cc circle_3"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "cc circle_4"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "cc circle_5"
+      })), /*#__PURE__*/_react.default.createElement("h1", {
         className: "text_1"
-      }, "I am"), /*#__PURE__*/_react.default.createElement("div", {
+      }, "I am free!!"), /*#__PURE__*/_react.default.createElement("div", {
         className: "mg-container"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "mg"
-      })), /*#__PURE__*/_react.default.createElement("h1", {
+      })), /*#__PURE__*/_react.default.createElement("h2", {
         className: "text_2"
-      }, "freeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"));
+      }, "Thank you!"), /*#__PURE__*/_react.default.createElement("h2", {
+        className: "text_3"
+      }, "Everyone deserves it!!"));
     }
   }]);
 
@@ -28979,7 +29034,7 @@ var UI = /*#__PURE__*/function (_React$Component) {
           }, /*#__PURE__*/_react.default.createElement("h1", {
             className: "answer",
             id: "text_2"
-          }, "It is I..."), /*#__PURE__*/_react.default.createElement("div", {
+          }, "It is me..."), /*#__PURE__*/_react.default.createElement("div", {
             className: "names"
           }, names.map(function (n) {
             return /*#__PURE__*/_react.default.createElement("p", {
@@ -38364,8 +38419,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function playSound() {
       var _this2 = this;
 
-      // let sound = createjs.Sound.play("sing");
-      // sound.volume = .3;
+      var sound = createjs.Sound.play("sing");
+      sound.volume = 1;
       this.setState({
         sound: false
       });
@@ -38481,7 +38536,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59379" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

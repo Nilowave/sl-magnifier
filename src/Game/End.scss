@@ -11,10 +11,77 @@
         text-shadow: 5px 5px 0 #000;
     }
 
+    h2 {
+        font-family: 'Yesteryear', cursive;
+        color: white;
+        text-shadow: 5px 5px 0 #000;
+    }
+
     .text_1 {
         position: absolute;
+        top: 18vh;
+        font-size: 7vh;
+        left: 35vw;
+    }
+
+    .circles {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+
+        & > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1b1b1b;
+            border-radius: 100%;
+            box-shadow: 0 0 100px rgba(255,255,255,.8);
+        }
+
+        .circle_1 {
+            width: 110%;
+            padding-bottom: 110%;
+        }
+
+        .circle_2 {
+            width: 90%;
+            padding-bottom: 90%;
+        }
+
+        .circle_3 {
+            width: 70%;
+            padding-bottom: 70%;
+        }
+
+        .circle_4 {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+
+        .circle_5 {
+            width: 30%;
+            padding-bottom: 30%;
+        }
+
+    }
+
+    .text_2 {
+        position: absolute;
         top: 10vh;
-        font-size: 20vh;
+        font-size: 9vh;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .text_3 {
+        position: absolute;
+        top: 75vh;
+        font-size: 9vh;
+        width: 100vw;
+        text-align: center;
     }
 
     .mg-container {
@@ -27,7 +94,7 @@
     .mg {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 55%;
         transform: translate(-50%,-30%);
 
         width: 30%;
@@ -39,8 +106,7 @@
         transform-origin: 50% 20%;
 
         animation: mg-wiggle 1.3s ease-in-out infinite;
-        &.wiggle {
-        }
+        
 
         &:after {
             content: "";
