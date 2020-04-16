@@ -28423,7 +28423,95 @@ var Player = /*#__PURE__*/function (_React$Component) {
 
 var _default = Player;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Player.scss":"src/Game/Player.scss"}],"src/Game/Game.scss":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Player.scss":"src/Game/Player.scss"}],"src/Game/End.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../assets/mg.png":[["mg.197ddd64.png","assets/mg.png"],"assets/mg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/End.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./End.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var End = /*#__PURE__*/function (_React$Component) {
+  _inherits(End, _React$Component);
+
+  var _super = _createSuper(End);
+
+  function End(props) {
+    _classCallCheck(this, End);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(End, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var endTL = gsap.timeline();
+      endTL.from(".mg-container", {
+        duration: 2,
+        scale: .7,
+        y: "20%",
+        ease: Expo.easeOut,
+        delay: .1,
+        onComplete: function onComplete() {// document.querySelector(".mg").classList.add("wiggle");
+        }
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "end"
+      }, /*#__PURE__*/_react.default.createElement("h1", {
+        className: "text_1"
+      }, "I am"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "mg-container"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "mg"
+      })), /*#__PURE__*/_react.default.createElement("h1", {
+        className: "text_2"
+      }, "freeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"));
+    }
+  }]);
+
+  return End;
+}(_react.default.Component);
+
+var _default = End;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./End.scss":"src/Game/End.scss"}],"src/Game/Game.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -28439,6 +28527,8 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var _Player = _interopRequireDefault(require("./Player"));
+
+var _End = _interopRequireDefault(require("./End"));
 
 require("./Game.scss");
 
@@ -28483,6 +28573,9 @@ var Game = /*#__PURE__*/function (_React$Component) {
     _this.runEndGame = _this.runEndGame.bind(_assertThisInitialized(_this));
     _this.egg = _react.default.createRef();
     _this.crack = _react.default.createRef();
+    _this.state = {
+      end: false
+    };
     return _this;
   }
 
@@ -28527,8 +28620,10 @@ var Game = /*#__PURE__*/function (_React$Component) {
       this.egg.current.classList.remove("idle");
       this.egg.current.classList.remove("wiggle");
       this.egg.current.classList.remove("boil");
-      this.egg.current.classList.add("cracked"); // document.querySelector(".flash").classList.add("play");
-      // gsap.ticker.fps(8);
+      this.egg.current.classList.add("cracked");
+      this.setState({
+        end: true
+      }); // gsap.ticker.fps(8);
 
       var endGameTL = gsap.timeline();
       endGameTL.set(".flash", {
@@ -28571,7 +28666,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
         className: "floor"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "shadow"
-      })), /*#__PURE__*/_react.default.createElement("div", {
+      })), this.state.end && /*#__PURE__*/_react.default.createElement(_End.default, null), /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-container"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "egg-wrapper idle",
@@ -28620,7 +28715,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
 
 var _default = Game;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Player":"src/Game/Player.js","./Game.scss":"src/Game/Game.scss"}],"src/UI/UI.scss":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Player":"src/Game/Player.js","./End":"src/Game/End.js","./Game.scss":"src/Game/Game.scss"}],"src/UI/UI.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -28856,7 +28951,7 @@ var UI = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny"];
+      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny", "Danilo"];
       this.props.players.map(function (p) {
         names.remove(p.name);
         return p;
@@ -38386,7 +38481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61301" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59379" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

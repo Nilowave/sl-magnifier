@@ -1,0 +1,56 @@
+
+.end {
+
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    h1 {
+        color: white;
+        text-shadow: 5px 5px 0 #000;
+    }
+
+    .text_1 {
+        position: absolute;
+        top: 10vh;
+        font-size: 20vh;
+    }
+
+    .mg-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .mg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-30%);
+
+        width: 30%;
+        padding-bottom: 30%;
+        // height: 0;
+        background: url('../../assets/mg.png') top left no-repeat;
+        background-position: 0 0;
+        background-size: 100%;
+        transform-origin: 50% 20%;
+
+        animation: mg-wiggle 1.3s ease-in-out infinite;
+        &.wiggle {
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+}
+
+@keyframes mg-wiggle {
+    0%, 100% {transform: translate(-50%,-30%) rotate(0deg);}
+    50% {transform: translate(-50%,-30%) rotate(-30deg);}
+}

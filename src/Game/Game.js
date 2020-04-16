@@ -1,5 +1,6 @@
 import React from 'react';
 import Player from './Player';
+import End from './End';
 
 import './Game.scss';
 
@@ -15,6 +16,10 @@ class Game extends React.Component {
 
         this.egg = React.createRef();
         this.crack = React.createRef();
+
+        this.state = {
+            end: false
+        }
         
     }
 
@@ -57,7 +62,7 @@ class Game extends React.Component {
         this.egg.current.classList.remove("boil");
         this.egg.current.classList.add("cracked");
 
-        // document.querySelector(".flash").classList.add("play");
+        this.setState({end:true});
 
         // gsap.ticker.fps(8);
         let endGameTL = gsap.timeline();
@@ -84,6 +89,10 @@ class Game extends React.Component {
                 <div className="floor">
                     <div className="shadow"></div>
                 </div>
+
+                {this.state.end && (
+                    <End />
+                )}
                 
                 <div className="egg-container">
                     <div className="egg-wrapper idle" onClick={this.onClick}  ref={this.egg}>
