@@ -1,6 +1,6 @@
 import openSocket from 'socket.io-client';
 
-let socket = openSocket('https://sl-magnifier.herokuapp.com');
+let socket = openSocket('https://sl-crack-the-egg.herokuapp.com/');
 if (process.env.NODE_ENV === 'development') { 
     socket = openSocket('http://localhost:3000');
 }
