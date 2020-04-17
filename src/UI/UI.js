@@ -87,7 +87,7 @@ class UI extends React.Component {
     }
 
     render() {
-        let names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny", "Danilo"];
+        let names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny"];
 
         this.props.players.map(p => {
             names.remove(p.name)
