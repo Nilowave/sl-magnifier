@@ -14,6 +14,7 @@ app.get('/', function (req, res) {
 
 var clicks = 0;
 let max = 100;
+let ended = 0;
 
 let colors = ['red', 'blue', 'green'];
 let colorCount = 0;
@@ -87,12 +88,36 @@ io.on('connection', function (socket) {
 
     socket.on('end game', function (data) {
         console.log("end game", data)
+        ended++;
         players.map(p => {
             if (p.name == data.name) {
-                return data
+                return p.clicks = data.clicks
             }
             return p
-        })
+        });
+
+        let exclude = ["Danilo", "Kit", "Sean", "Kristina", "Sombra", "Yusaku", "Akiko"];
+
+        if (ended == players.length) {
+            let filtered = players.filter(p => {
+                return !exclude.includes(p.name);
+            })
+
+            let sorted = filtered.sort((a, b) => {
+                console.log("compare :", a.clicks, b.clicks)
+                if (a.clicks > b.clicks) return -1;
+                if (b.clicks > a.clicks) return 1;
+              
+                return 0;
+            })
+
+            io.emit('winner', sorted[0]);
+            
+            console.log("WHO CLICKED MOST???", sorted[0].name)
+            console.log(sorted)
+        }
+
+        console.log("all",players)
     });
 
 });

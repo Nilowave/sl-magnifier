@@ -1,7 +1,7 @@
 
 .ui {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     font-family: 'Bangers', sans-serif;
 
     h1 {
-        width: 100vw;
+        width: 100%;
         color: white;
         text-align: center;
         text-shadow: 5px 5px 0 #000;
@@ -23,34 +23,34 @@
     }
 
     .title {
-        font-size: 10vh;
-        padding-top: 16vh;
+        font-size: 72px;
+        padding-top: 10%;
 
         .halt {
-            font-size: 20vh;
+            font-size: 144px;
         }
     }
 
     .line {
-        width: 30vw;
+        width: 30%;
         height: 2px;
         background-color: rgba(255,255,255,.5);
-        margin-left: 35vw;
-        margin-top: 5vh;
+        margin-left: 35%;
+        margin-top: 5%;
     }
 
     .input {
-        margin-top: 5vh;
-        font-size: 4vh;
-        width: 60vw;
-        margin-left: 20vw;
+        margin-top: 5%;
+        font-size: 57px;
+        width: 60%;
+        margin-left: 20%;
         text-align: center;
         position: relative;
 
         h1 {
-            margin-bottom: 2vh;
+            margin-bottom: 2%;
             width: 100%;
-            font-size: 8vh;
+            font-size: 57px;
         }
     }
 
@@ -60,7 +60,7 @@
         p {
             display: inline-block;
             padding: 10px;
-            font-size: 6vh;
+            font-size: 43px;
             opacity: .3;
             cursor: pointer;
 
@@ -73,29 +73,29 @@
 
     .page2 {
         .halt {
-            font-size: 11vh !important;
+            font-size: 79px !important;
         }
         h1 {
-            font-size: 8vh !important;
+            font-size: 57px !important;
         }
 
         .input {
-            width: 60vw;
-            margin-left: 20vw;
+            width: 60%;
+            margin-left: 20%;
 
             h1 {
-                font-size: 6vh !important;
+                font-size: 43px !important;
             }
         }
     }
 
     .weapons {
-        margin-top: 10vh;
+        margin-top: 10%;
         display: flex;
         flex-flow: row;
         justify-content: space-evenly;
         align-items: center;
-        height: 30vh;
+        height: 30%;
 
         .weapon {
             width: 28%;
@@ -135,26 +135,32 @@
     .page3 {
         .pt1 {
             position: absolute;
-            font-size: 11vh;
-            top: 43vh;
+            font-size: 5em;
+            top: 43%;
         }
 
         .pt2 {
             position: absolute;
-            font-size: 35vh;
-            top: 6vh;
+            font-size: 19em;
+            top: 6%;
+
+            text-shadow: 10px 10px 0 #000;
         }
 
         .pt3 {
             position: absolute;
-            font-size: 15vh;
-            top: 41vh;
+            font-size: 7em;
+            top: 43%;
+
+            text-shadow: 10px 10px 0 #000;
         }
 
         .pt4 {
             position: absolute;
-            font-size: 40vh;
-            top: 56vh;
+            font-size: 19em;
+            top: 57%;
+
+            text-shadow: 10px 10px 0 #000;
         }
     }
 }

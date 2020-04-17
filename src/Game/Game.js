@@ -64,14 +64,13 @@ class Game extends React.Component {
 
         this.setState({end:true});
 
-        // gsap.ticker.fps(8);
         let endGameTL = gsap.timeline();
 
         endGameTL.set(".flash", {opacity: 1})
         endGameTL.to(".flash", {duration:.6, opacity:0, ease: Expo.easeOut}, "start")
-        endGameTL.to(this.egg.current, {duration:.8, y:"10vh", ease: Bounce.easeOut}, "start")
-        endGameTL.to(".players", {duration: 1, y: "70vh", scale:1.2, ease: Expo.easeIn}, "start+=.5");
-        endGameTL.to([".floor",".egg-container"], {duration: 1, y: "70vh", scale:1.2, ease: Expo.easeIn}, "start+=.7");
+        endGameTL.to(this.egg.current, {duration:.8, y:"10%", ease: Bounce.easeOut}, "start")
+        endGameTL.to(".players", {duration: 1, y: "200%", scale:1.2, ease: Expo.easeIn}, "start+=.5");
+        endGameTL.to([".floor",".egg-container"], {duration: 1, y: "200%", scale:1.2, ease: Expo.easeIn}, "start+=.7");
         
     }
 
@@ -91,7 +90,7 @@ class Game extends React.Component {
                 </div>
 
                 {this.state.end && (
-                    <End />
+                    <End music={this.props.music} winner={this.props.winner || {}}/>
                 )}
                 
                 <div className="egg-container">

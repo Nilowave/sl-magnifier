@@ -9,7 +9,7 @@ import './App.scss';
 
 import { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame } from '../api';
 
-const AMMO = 10;
+const AMMO = 5;
 
 class App extends React.Component {
     
@@ -36,7 +36,6 @@ class App extends React.Component {
     }
 
     handleSocketResponse(response) {
-        console.log("handleSocketResponse", response.type)
         switch(response.type) {
             case "update-egg":
                 this.setState({
@@ -55,21 +54,25 @@ class App extends React.Component {
             case "end-game":
                 this.runEndGame(response.data);
                 break;
+
+            case "winner":
+                this.setState({
+                    ...this.state,
+                    winner:response.data
+                })
+                break;
         }
 
         if (response.type == "update-players" && !this.state.player) {
-            console.log("is plaer ready???",this.state.player)
+            // console.log("is plaer ready???",this.state.player)
             this.tryReconnect();
-        }
-
-        if(this.state.sound) {
-            console.log("play sound !!")
         }
     }
 
     handleClick(e) {
         let count = this.state.player.clicks;
         count++;
+        
         this.setState({
             ...this.state,
             player: {
@@ -82,8 +85,6 @@ class App extends React.Component {
     }
 
     startGame(player) {
-        console.log("START GAME")
-        // console.log("player", player)
         this.setState({player: player});
         socketOnStartGame(player);
     }
@@ -104,7 +105,6 @@ class App extends React.Component {
     }
 
     tryReconnect() {
-        console.log("try reconnect")
         let player = JSON.parse(window.localStorage.getItem("sl-magnifier"));
         let match = this.state.players.filter(p => { console.log("p",p); return p.name == player.name})[0];
 
@@ -112,7 +112,6 @@ class App extends React.Component {
             this.setState({start:true});
             this.startGame(player);
         } else {
-            console.log("no player match in mage");
             window.localStorage.clear();
         }
     }
@@ -120,7 +119,8 @@ class App extends React.Component {
     playSound() {
         let sound = createjs.Sound.play("sing");
         sound.volume = 1;
-        this.setState({sound: false});
+
+        this.setState({sound: false, music:sound});
 
         let text = new SplitText(".loading h1", { type: "chars" });
 
@@ -143,9 +143,18 @@ class App extends React.Component {
             <div className="app">
                 
                 <div className="grad"></div>
-                <Game onClick={this.handleClick} progress={this.state.value * 100} players={this.state.players} player={this.state.player} endGame={this.state.endGame} ref={this.game} />
+
+                <Game 
+                    winner={this.state.winner}
+                    music={this.state.music} 
+                    onClick={this.handleClick} 
+                    progress={this.state.value * 100} 
+                    players={this.state.players} 
+                    player={this.state.player} 
+                    endGame={this.state.endGame} 
+                    ref={this.game} />
                 
-                {this.state.start === undefined && (
+                {(this.state.start === undefined && 0==0) && (
                     <div className="loading">
                         <h1>Is your sound on?</h1>
                         {this.state.sound && (
@@ -154,7 +163,7 @@ class App extends React.Component {
                     </div>
                 )}
 
-                {this.state.start === false && (
+                { (this.state.start === false && 0==0) && (
                     <UI startGame={this.startGame} players={this.state.players} hideUI={this.hideUI} />
                 )}
             </div>

@@ -1,18 +1,19 @@
 
 .game {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    
 
     .flash {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background-color: #fff;
         pointer-events: none;
         opacity: 0;
@@ -23,9 +24,10 @@
     }
 
     .egg-container {
+        // display: none;
         position: absolute;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         left: 50%;
         top: 0;
         transform: translateX(-50%);
@@ -186,27 +188,16 @@
         }
     
     }
-
-    .players {
-        width: 80vw;
-        height: 23vh;
-        position: absolute;
-        bottom: 5vh;
-        left: 10vw;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
     
     .floor {
-        width: 100vw;
-        height: 25vh;
+        width: 150%;
+        height: 25%;
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: -25%;
         background-color: #555;
         border-top: solid 2px black;
+        border-radius: 100% 100% 0 0;
     
         .shadow {
             width: 120px;
@@ -214,7 +205,7 @@
             background: black;
             border-radius: 60px / 10px;
             position: absolute;
-            top: 2vh;
+            top: 2%;
             left: 50%;
             transform: translateX(-60px);
 

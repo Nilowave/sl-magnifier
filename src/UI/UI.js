@@ -28,7 +28,6 @@ class UI extends React.Component {
             weapon: weapon,
             clicks: 0
         })
-        // this.props.onComplete(data);
     }
 
     animatePage2() {
@@ -46,12 +45,10 @@ class UI extends React.Component {
     }
 
     animatePage3() {
-        console.log("animate page 3")
         this.props.startGame(this.state);
         let pt1 = new SplitText("#pt1", { type: "words" });
         
         var page3TL = gsap.timeline({onComplete: e => {
-            console.log("test")
             this.props.hideUI(this.state);
         }});
 

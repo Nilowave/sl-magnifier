@@ -1,5 +1,14 @@
 
 .players {
+    width: 80%;
+    height: 23%;
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
     .sprite {
         width: 15%;

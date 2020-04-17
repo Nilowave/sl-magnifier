@@ -1,3 +1,13 @@
+.players {
+  width: 80%;
+  height: 23%;
+  position: absolute;
+  bottom: 8%;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .players .sprite {
   width: 15%;
   padding-bottom: 15%;
@@ -111,8 +121,8 @@
 .end {
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 .end h1 {
   color: white;
@@ -125,14 +135,91 @@
 }
 .end .text_1 {
   position: absolute;
-  top: 18vh;
-  font-size: 7vh;
-  left: 35vw;
+  top: 30%;
+  font-size: 2em;
+  left: 45%;
+}
+.end .face {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  padding-bottom: 35%;
+  opacity: 0;
+}
+.end .face.Troy {
+  background: url("/troy.1da073c2.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Alison {
+  background: url("/alison.7493c799.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Junior {
+  background: url("/junior.aff4a74e.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Sombra {
+  background: url("/sombra.00691bbb.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Yusaku {
+  background: url("/yusaku.32bc62d2.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Kit {
+  background: url("/kit.e1045790.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Sean {
+  background: url("/sean.e0629dd3.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Akiko {
+  background: url("/akiko.a08a382a.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Michael {
+  background: url("/michael.ab0fea41.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Kelvin {
+  background: url("/kelvin.b8362e31.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Pete {
+  background: url("/pete.b3fb4512.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Tyler {
+  background: url("/tyler.7c247420.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Noelle {
+  background: url("/noelle.105ec30a.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Kristina {
+  background: url("/kristina.b29bfc64.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Kayla {
+  background: url("/kayla.c69dc4c9.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.James {
+  background: url("/james.2b406e24.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .face.Vinny {
+  background: url("/vinny.ca24a464.png") top left no-repeat;
+  background-size: 100%;
 }
 .end .circles {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
 }
@@ -167,32 +254,98 @@
 }
 .end .text_2 {
   position: absolute;
-  top: 10vh;
-  font-size: 9vh;
-  width: 100vw;
+  top: 8%;
+  font-size: 4em;
+  width: 100%;
   text-align: center;
+  font-family: "Yesteryear", cursive;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
 }
 .end .text_3 {
   position: absolute;
-  top: 75vh;
-  font-size: 9vh;
-  width: 100vw;
+  top: 18%;
+  font-size: 3em;
+  width: 100%;
   text-align: center;
+  font-family: "Yesteryear", cursive;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
+}
+.end .text_4 {
+  position: absolute;
+  top: 40%;
+  font-size: 10em;
+  width: 40%;
+  text-align: center;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
+}
+.end .text_5 {
+  position: absolute;
+  top: 40%;
+  font-size: 5em;
+  width: 40%;
+  text-align: center;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
+  left: auto;
+  right: 0;
+}
+.end .text_6 {
+  position: absolute;
+  top: 77%;
+  font-size: 5em;
+  width: 100%;
+  text-align: center;
+  font-family: "Yesteryear", cursive;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
+}
+.end .text_7 {
+  position: absolute;
+  top: 10%;
+  font-size: 10em;
+  width: 100%;
+  text-align: center;
+  font-family: "Yesteryear", cursive;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
+  opacity: 0;
+}
+.end .text_8 {
+  position: absolute;
+  top: 76%;
+  font-size: 10em;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 5px 5px 0 #000;
+  opacity: 0;
+}
+.end .black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  opacity: 0;
 }
 .end .mg-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 .end .mg {
   position: absolute;
   left: 50%;
   top: 55%;
   transform: translate(-50%, -30%);
-  width: 30%;
-  padding-bottom: 30%;
+  width: 25%;
+  padding-bottom: 25%;
   background: url("/mg.197ddd64.png") top left no-repeat;
   background-position: 0 0;
   background-size: 100%;
@@ -214,8 +367,8 @@
   }
 }
 .game {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -225,8 +378,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   pointer-events: none;
   opacity: 0;
@@ -236,8 +389,8 @@
 }
 .game .egg-container {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
@@ -369,24 +522,15 @@
   background: url("/c6.543e122e.png") no-repeat center center;
   background-size: contain;
 }
-.game .players {
-  width: 80vw;
-  height: 23vh;
-  position: absolute;
-  bottom: 5vh;
-  left: 10vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 .game .floor {
-  width: 100vw;
-  height: 25vh;
+  width: 150%;
+  height: 25%;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -25%;
   background-color: #555;
   border-top: solid 2px black;
+  border-radius: 100% 100% 0 0;
 }
 .game .floor .shadow {
   width: 120px;
@@ -394,7 +538,7 @@
   background: black;
   border-radius: 60px/10px;
   position: absolute;
-  top: 2vh;
+  top: 2%;
   left: 50%;
   transform: translateX(-60px);
   animation: idle-shadow 1s steps(1) infinite;
@@ -452,8 +596,8 @@
   }
 }
 .ui {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -461,7 +605,7 @@
   font-family: "Bangers", sans-serif;
 }
 .ui h1 {
-  width: 100vw;
+  width: 100%;
   color: white;
   text-align: center;
   text-shadow: 5px 5px 0 #000;
@@ -472,31 +616,31 @@
   text-shadow: 5px 5px 0 #000;
 }
 .ui .title {
-  font-size: 10vh;
-  padding-top: 16vh;
+  font-size: 72px;
+  padding-top: 10%;
 }
 .ui .title .halt {
-  font-size: 20vh;
+  font-size: 144px;
 }
 .ui .line {
-  width: 30vw;
+  width: 30%;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-  margin-left: 35vw;
-  margin-top: 5vh;
+  margin-left: 35%;
+  margin-top: 5%;
 }
 .ui .input {
-  margin-top: 5vh;
-  font-size: 4vh;
-  width: 60vw;
-  margin-left: 20vw;
+  margin-top: 5%;
+  font-size: 57px;
+  width: 60%;
+  margin-left: 20%;
   text-align: center;
   position: relative;
 }
 .ui .input h1 {
-  margin-bottom: 2vh;
+  margin-bottom: 2%;
   width: 100%;
-  font-size: 8vh;
+  font-size: 57px;
 }
 .ui .names {
   text-align: center;
@@ -504,7 +648,7 @@
 .ui .names p {
   display: inline-block;
   padding: 10px;
-  font-size: 6vh;
+  font-size: 43px;
   opacity: 0.3;
   cursor: pointer;
 }
@@ -512,25 +656,25 @@
   opacity: 1 !important;
 }
 .ui .page2 .halt {
-  font-size: 11vh !important;
+  font-size: 79px !important;
 }
 .ui .page2 h1 {
-  font-size: 8vh !important;
+  font-size: 57px !important;
 }
 .ui .page2 .input {
-  width: 60vw;
-  margin-left: 20vw;
+  width: 60%;
+  margin-left: 20%;
 }
 .ui .page2 .input h1 {
-  font-size: 6vh !important;
+  font-size: 43px !important;
 }
 .ui .weapons {
-  margin-top: 10vh;
+  margin-top: 10%;
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 30vh;
+  height: 30%;
 }
 .ui .weapons .weapon {
   width: 28%;
@@ -560,57 +704,62 @@
 }
 .ui .page3 .pt1 {
   position: absolute;
-  font-size: 11vh;
-  top: 43vh;
+  font-size: 5em;
+  top: 43%;
 }
 .ui .page3 .pt2 {
   position: absolute;
-  font-size: 35vh;
-  top: 6vh;
+  font-size: 19em;
+  top: 6%;
+  text-shadow: 10px 10px 0 #000;
 }
 .ui .page3 .pt3 {
   position: absolute;
-  font-size: 15vh;
-  top: 41vh;
+  font-size: 7em;
+  top: 43%;
+  text-shadow: 10px 10px 0 #000;
 }
 .ui .page3 .pt4 {
   position: absolute;
-  font-size: 40vh;
-  top: 56vh;
+  font-size: 19em;
+  top: 57%;
+  text-shadow: 10px 10px 0 #000;
 }
 .app {
-  width: 100vw;
-  height: 100vh;
+  width: max(1280px, 50vw);
+  height: min(960px, 100vh);
   overflow: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   background: radial-gradient(ellipse at center, #5f5f5f 0%, #2a2a2a 100%);
+  transform: translate(-50%, -50%);
+  border-radius: 20%;
 }
 .app .loading {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
 }
 .app .loading h1 {
-  width: 100vw;
+  width: 100%;
   color: black;
   text-align: center;
   text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
-  font-size: 10vh;
+  font-size: 5em;
   position: absolute;
-  top: 25vh;
+  top: 25%;
 }
 .app .loading p {
-  width: 20vw;
+  width: 20%;
   color: black;
   text-align: center;
   text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
-  font-size: 8vw;
+  font-size: 5em;
   position: absolute;
-  top: 40vh;
-  left: 40vw;
+  top: 40%;
+  left: 40%;
   cursor: pointer;
   border: solid 7px #000;
   padding: 20px;
@@ -620,8 +769,8 @@
 .app:after {
   content: "";
   position: absolute;
-  width: 200vw;
-  height: 200vh;
+  width: 200%;
+  height: 200%;
   left: -50%;
   top: -50%;
   background-image: url("/grain.61592de5.png");
@@ -630,8 +779,8 @@
 }
 
 .grad {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;

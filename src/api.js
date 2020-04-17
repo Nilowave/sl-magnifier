@@ -21,6 +21,11 @@ function socketOnConnect(callback) {
         type: "end-game",
         data: data
     }));
+
+    socket.on('winner', (data) => callback({
+        type: "winner",
+        data: data
+    }));
 }
 
 function socketOnEggClick(value) {
@@ -34,7 +39,6 @@ function socketOnStartGame(data) {
 }
 
 function socketOnEndGame(player) {
-    console.log("END GAME")
     socket.emit('end game', player);
 }
 
