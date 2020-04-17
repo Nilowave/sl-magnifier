@@ -28357,7 +28357,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../assets/idle-sprite.png":[["idle-sprite.720d9748.png","assets/idle-sprite.png"],"assets/idle-sprite.png"],"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"./../../assets/heads/danilo.png":[["danilo.dd6ab7f1.png","assets/heads/danilo.png"],"assets/heads/danilo.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
+},{"./../../assets/idle-sprite.png":[["idle-sprite.720d9748.png","assets/idle-sprite.png"],"assets/idle-sprite.png"],"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"./../../assets/danilo.png":[["danilo.d854699d.png","assets/danilo.png"],"assets/danilo.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29140,7 +29140,7 @@ var UI = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny", "Danilo"];
+      var names = ["Troy", "Alison", "Junior", "Sombra", "Yusaku", "Kit", "Sean", "Akiko", "Michael", "Kelvin", "Pete", "Tyler", "Noelle", "Kristina", "Kayla", "James", "Vinny"];
       this.props.players.map(function (p) {
         names.remove(p.name);
         return p;
@@ -29579,11 +29579,14 @@ var Loader = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "loading"
-      }, /*#__PURE__*/_react.default.createElement("h1", null, "Is your sound on?"), this.props.sound ? /*#__PURE__*/_react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("h1", null, "Is your sound on?"), this.props.sound && !this.props.isAdmin && this.props.gameOn ? /*#__PURE__*/_react.default.createElement("p", {
         onClick: this.clickIt
-      }, "Yes!") : this.state.loading && /*#__PURE__*/_react.default.createElement(_loader.default, {
+      }, "Yes!") : this.state.loading && !this.props.sound && /*#__PURE__*/_react.default.createElement(_loader.default, {
         className: "indicator"
-      }));
+      }), this.state.loading && this.props.isAdmin && this.props.sound && /*#__PURE__*/_react.default.createElement("p", {
+        className: "admin",
+        onClick: this.props.runGameOn
+      }, "Game on!"));
     }
   }]);
 
@@ -38668,6 +38671,7 @@ exports.socketOnConnect = socketOnConnect;
 exports.socketOnEggClick = socketOnEggClick;
 exports.socketOnStartGame = socketOnStartGame;
 exports.socketOnEndGame = socketOnEndGame;
+exports.adminGameOn = adminGameOn;
 
 var _socket = _interopRequireDefault(require("socket.io-client"));
 
@@ -38675,8 +38679,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var socket = (0, _socket.default)('https://sl-crack-the-egg.herokuapp.com/');
 
-if ("development" === 'development') {
-  socket = (0, _socket.default)('http://localhost:3000');
+if ("development" === 'development') {// socket = openSocket('http://localhost:3000');
 }
 
 function socketOnConnect(callback) {
@@ -38704,6 +38707,15 @@ function socketOnConnect(callback) {
       data: data
     });
   });
+  socket.on('game on', function (data) {
+    return callback({
+      type: "game-on"
+    });
+  });
+}
+
+function adminGameOn() {
+  socket.emit('game on');
 }
 
 function socketOnEggClick(value) {
@@ -38788,11 +38800,13 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this.handleSocketResponse = _this.handleSocketResponse.bind(_assertThisInitialized(_this));
     _this.hideUI = _this.hideUI.bind(_assertThisInitialized(_this));
     _this.playSound = _this.playSound.bind(_assertThisInitialized(_this));
+    _this.runGameOn = _this.runGameOn.bind(_assertThisInitialized(_this));
     _this.state = {
       value: 0,
       clicks: 0,
       players: [],
-      endGame: false
+      endGame: false,
+      gameOn: false
     };
     (0, _api.socketOnConnect)(_this.handleSocketResponse);
     _this.game = _react.default.createRef();
@@ -38803,6 +38817,12 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "handleSocketResponse",
     value: function handleSocketResponse(response) {
       switch (response.type) {
+        case "game-on":
+          this.setState(_objectSpread({}, this.state, {
+            gameOn: true
+          }));
+          break;
+
         case "update-egg":
           this.setState(_objectSpread({}, this.state, {}, response.data));
           break;
@@ -38848,6 +38868,11 @@ var App = /*#__PURE__*/function (_React$Component) {
         player: player
       });
       (0, _api.socketOnStartGame)(player);
+    }
+  }, {
+    key: "runGameOn",
+    value: function runGameOn() {
+      (0, _api.adminGameOn)();
     }
   }, {
     key: "hideUI",
@@ -38940,6 +38965,9 @@ var App = /*#__PURE__*/function (_React$Component) {
         endGame: this.state.endGame,
         ref: this.game
       }), this.state.start === undefined && 0 == 0 && /*#__PURE__*/_react.default.createElement(_Loader.default, {
+        runGameOn: this.runGameOn,
+        gameOn: this.state.gameOn,
+        isAdmin: false,
         sound: this.state.sound,
         playSound: this.playSound
       }), this.state.start === false && 0 == 0 && /*#__PURE__*/_react.default.createElement(_UI.default, {
@@ -39007,7 +39035,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63961" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59518" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

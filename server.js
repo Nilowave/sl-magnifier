@@ -87,6 +87,10 @@ io.on('connection', function (socket) {
         io.emit('update players', players);
     });
 
+    socket.on('game on', function (data) {
+        io.emit('game on', {});
+    })
+
     socket.on('end game', function (data) {
         console.log("end game", data)
         ended++;

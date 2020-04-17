@@ -2,7 +2,7 @@ import openSocket from 'socket.io-client';
 
 let socket = openSocket('https://sl-crack-the-egg.herokuapp.com/');
 if (process.env.NODE_ENV === 'development') { 
-    socket = openSocket('http://localhost:3000');
+    // socket = openSocket('http://localhost:3000');
 }
 
 function socketOnConnect(callback) {
@@ -26,6 +26,14 @@ function socketOnConnect(callback) {
         type: "winner",
         data: data
     }));
+
+    socket.on('game on', (data) => callback({
+        type: "game-on"
+    }));
+}
+
+function adminGameOn() {
+    socket.emit('game on');
 }
 
 function socketOnEggClick(value) {
@@ -42,4 +50,4 @@ function socketOnEndGame(player) {
     socket.emit('end game', player);
 }
 
-export { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame }
+export { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame, adminGameOn }

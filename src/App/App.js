@@ -8,7 +8,7 @@ import soundFile from '../../assets/sing.mp3';
 
 import './App.scss';
 
-import { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame } from '../api';
+import { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame, adminGameOn } from '../api';
 
 const AMMO = 1;
 
@@ -22,12 +22,14 @@ class App extends React.Component {
         this.handleSocketResponse = this.handleSocketResponse.bind(this);
         this.hideUI = this.hideUI.bind(this);
         this.playSound = this.playSound.bind(this);
+        this.runGameOn = this.runGameOn.bind(this);
 
         this.state = {
             value: 0,
             clicks: 0,
             players: [],
-            endGame: false
+            endGame: false,
+            gameOn: false
         };
 
         socketOnConnect(this.handleSocketResponse);
@@ -38,6 +40,14 @@ class App extends React.Component {
 
     handleSocketResponse(response) {
         switch(response.type) {
+
+            case "game-on":
+                this.setState({
+                    ...this.state,
+                    gameOn: true
+                });
+                break;
+
             case "update-egg":
                 this.setState({
                     ...this.state,
@@ -88,6 +98,10 @@ class App extends React.Component {
     startGame(player) {
         this.setState({player: player});
         socketOnStartGame(player);
+    }
+
+    runGameOn() {
+        adminGameOn();
     }
 
     hideUI() {
@@ -156,7 +170,7 @@ class App extends React.Component {
                     ref={this.game} />
                 
                 {(this.state.start === undefined && 0==0) && (
-                    <Loader sound={this.state.sound} playSound={this.playSound} />
+                    <Loader runGameOn={this.runGameOn} gameOn={this.state.gameOn} isAdmin={false} sound={this.state.sound} playSound={this.playSound} />
                 )}
 
                 { (this.state.start === false && 0==0) && (
