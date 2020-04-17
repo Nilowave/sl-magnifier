@@ -28357,7 +28357,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../assets/idle-sprite.png":[["idle-sprite.720d9748.png","assets/idle-sprite.png"],"assets/idle-sprite.png"],"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
+},{"./../../assets/idle-sprite.png":[["idle-sprite.720d9748.png","assets/idle-sprite.png"],"assets/idle-sprite.png"],"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"./../../assets/heads/danilo.png":[["danilo.dd6ab7f1.png","assets/heads/danilo.png"],"assets/heads/danilo.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/Player.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28561,7 +28561,7 @@ var End = /*#__PURE__*/function (_React$Component) {
         duration: 5,
         opacity: 1,
         ease: Quad.easeIn
-      }, "start+=9");
+      }, "start+=13");
       endTL.to(volume, {
         duration: 5,
         val: 0,
@@ -28569,7 +28569,7 @@ var End = /*#__PURE__*/function (_React$Component) {
         onUpdate: function onUpdate(e) {
           _this.props.music.volume = volume.val;
         }
-      }, "start+=9");
+      }, "start+=13");
       endTL.to(volume, {
         duration: 0.00001,
         val: 1,
@@ -28577,62 +28577,62 @@ var End = /*#__PURE__*/function (_React$Component) {
         onUpdate: function onUpdate(e) {
           _this.props.music.volume = volume.val;
         }
-      }, "start+=16");
+      }, "start+=20");
       endTL.to(".end .black", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_1", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_2", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_3", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_4", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_5", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_6", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_7", {
         duration: 0.00001,
         autoAlpha: 1,
         display: 'block'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .text_8", {
         duration: 0.00001,
         autoAlpha: 1,
         display: 'block'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .face", {
         duration: 0.00001,
         autoAlpha: 1,
         display: 'block'
-      }, "start+=17");
+      }, "start+=20");
       endTL.to(".end .mg-container", {
         duration: 0.00001,
         autoAlpha: 0,
         display: 'none'
-      }, "start+=17");
+      }, "start+=20");
     }
   }, {
     key: "fadeMusic",
@@ -29260,7 +29260,324 @@ Array.prototype.remove = function () {
 
 var _default = UI;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./UI.scss":"src/UI/UI.scss"}],"assets/sing.mp3":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./UI.scss":"src/UI/UI.scss"}],"assets/loader.svg":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+var _ref = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.9166666666666666s",
+  repeatCount: "indefinite"
+}));
+
+var _ref2 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(30 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.8333333333333334s",
+  repeatCount: "indefinite"
+}));
+
+var _ref3 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(60 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.75s",
+  repeatCount: "indefinite"
+}));
+
+var _ref4 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(90 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.6666666666666666s",
+  repeatCount: "indefinite"
+}));
+
+var _ref5 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(120 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.5833333333333334s",
+  repeatCount: "indefinite"
+}));
+
+var _ref6 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(150 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.5s",
+  repeatCount: "indefinite"
+}));
+
+var _ref7 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(180 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.4166666666666667s",
+  repeatCount: "indefinite"
+}));
+
+var _ref8 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(210 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.3333333333333333s",
+  repeatCount: "indefinite"
+}));
+
+var _ref9 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(240 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.25s",
+  repeatCount: "indefinite"
+}));
+
+var _ref10 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(270 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.16666666666666666s",
+  repeatCount: "indefinite"
+}));
+
+var _ref11 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(300 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "-0.08333333333333333s",
+  repeatCount: "indefinite"
+}));
+
+var _ref12 = /*#__PURE__*/React.createElement("rect", {
+  x: 47,
+  y: 24,
+  rx: 3,
+  ry: 6,
+  width: 6,
+  height: 12,
+  transform: "rotate(330 50 50)"
+}, /*#__PURE__*/React.createElement("animate", {
+  attributeName: "opacity",
+  values: "1;0",
+  keyTimes: "0;1",
+  dur: "1s",
+  begin: "0s",
+  repeatCount: "indefinite"
+}));
+
+function SvgLoader(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    style: {
+      margin: "auto",
+      background: "#fff"
+    },
+    width: 200,
+    height: 200,
+    viewBox: "0 0 100 100",
+    preserveAspectRatio: "xMidYMid",
+    display: "block"
+  }, props), _ref, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _ref10, _ref11, _ref12);
+}
+
+var _default = SvgLoader;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/UI/Loader.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _loader = _interopRequireDefault(require("../../assets/loader.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+// import './Player.scss';
+var Loader = /*#__PURE__*/function (_React$Component) {
+  _inherits(Loader, _React$Component);
+
+  var _super = _createSuper(Loader);
+
+  function Loader(props) {
+    _classCallCheck(this, Loader);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Loader, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "loading"
+      }, /*#__PURE__*/_react.default.createElement("h1", null, "Is your sound on?"), this.props.sound ? /*#__PURE__*/_react.default.createElement("p", {
+        onClick: this.props.playSound
+      }, "Yes!") : /*#__PURE__*/_react.default.createElement(_loader.default, {
+        className: "indicator"
+      }));
+    }
+  }]);
+
+  return Loader;
+}(_react.default.Component);
+
+var _default = Loader;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../assets/loader.svg":"assets/loader.svg"}],"assets/sing.mp3":[function(require,module,exports) {
 module.exports = "/sing.8dd8d9e9.mp3";
 },{}],"src/App/App.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -38400,6 +38717,8 @@ var _Game = _interopRequireDefault(require("../Game/Game"));
 
 var _UI = _interopRequireDefault(require("../UI/UI"));
 
+var _Loader = _interopRequireDefault(require("../UI/Loader"));
+
 var _sing = _interopRequireDefault(require("../../assets/sing.mp3"));
 
 require("./App.scss");
@@ -38605,11 +38924,10 @@ var App = /*#__PURE__*/function (_React$Component) {
         player: this.state.player,
         endGame: this.state.endGame,
         ref: this.game
-      }), this.state.start === undefined && 0 == 0 && /*#__PURE__*/_react.default.createElement("div", {
-        className: "loading"
-      }, /*#__PURE__*/_react.default.createElement("h1", null, "Is your sound on?"), this.state.sound && /*#__PURE__*/_react.default.createElement("p", {
-        onClick: this.playSound
-      }, "Yes!")), this.state.start === false && 0 == 0 && /*#__PURE__*/_react.default.createElement(_UI.default, {
+      }), this.state.start === undefined && 0 == 0 && /*#__PURE__*/_react.default.createElement(_Loader.default, {
+        sound: this.state.sound,
+        playSound: this.playSound
+      }), this.state.start === false && 0 == 0 && /*#__PURE__*/_react.default.createElement(_UI.default, {
         startGame: this.startGame,
         players: this.state.players,
         hideUI: this.hideUI
@@ -38622,7 +38940,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Game/Game":"src/Game/Game.js","../UI/UI":"src/UI/UI.js","../../assets/sing.mp3":"assets/sing.mp3","./App.scss":"src/App/App.scss","../api":"src/api.js"}],"src/reset.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Game/Game":"src/Game/Game.js","../UI/UI":"src/UI/UI.js","../UI/Loader":"src/UI/Loader.js","../../assets/sing.mp3":"assets/sing.mp3","./App.scss":"src/App/App.scss","../api":"src/api.js"}],"src/reset.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -38674,7 +38992,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63239" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62544" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

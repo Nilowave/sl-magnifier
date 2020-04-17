@@ -2,6 +2,7 @@ import React from 'react';
 
 import Game from '../Game/Game';
 import UI from '../UI/UI';
+import Loader from '../UI/Loader'
 
 import soundFile from '../../assets/sing.mp3';
 
@@ -155,12 +156,7 @@ class App extends React.Component {
                     ref={this.game} />
                 
                 {(this.state.start === undefined && 0==0) && (
-                    <div className="loading">
-                        <h1>Is your sound on?</h1>
-                        {this.state.sound && (
-                            <p onClick={this.playSound}>Yes!</p>
-                        )}
-                    </div>
+                    <Loader sound={this.state.sound} playSound={this.playSound} />
                 )}
 
                 { (this.state.start === false && 0==0) && (

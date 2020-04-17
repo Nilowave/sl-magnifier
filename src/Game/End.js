@@ -36,25 +36,26 @@ class End extends React.Component {
         endTL.from(".end .text_4", {duration: .0001, opacity:0}, "start+=6.2")
         endTL.from(".end .text_5", {duration: .0001, opacity:0}, "start+=7")
         endTL.from(keeper._letters, {duration: .5, opacity:0, ease: Expo.easeOut, stagger:.05}, "start+=8")
-        endTL.to(".end .black", {duration: 5, opacity:1, ease:Quad.easeIn}, "start+=9")
+
+        endTL.to(".end .black", {duration: 5, opacity:1, ease:Quad.easeIn}, "start+=13")
         endTL.to(volume, {duration:5, val:0, ease: Linear.easeNone, onUpdate:(e) => {
             this.props.music.volume = volume.val;
-        }}, "start+=9")
+        }}, "start+=13")
         
         endTL.to(volume, {duration:0.00001, val:1, ease: Linear.easeNone, onUpdate:(e) => {
             this.props.music.volume = volume.val;
-        }}, "start+=16")
-        endTL.to(".end .black", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_1", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_2", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_3", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_4", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_5", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_6", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
-        endTL.to(".end .text_7", {duration: 0.00001, autoAlpha: 1, display:'block'}, "start+=17")
-        endTL.to(".end .text_8", {duration: 0.00001, autoAlpha: 1, display:'block'}, "start+=17")
-        endTL.to(".end .face", {duration: 0.00001, autoAlpha: 1, display:'block'}, "start+=17")
-        endTL.to(".end .mg-container", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=17")
+        }}, "start+=20")
+        endTL.to(".end .black", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_1", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_2", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_3", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_4", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_5", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_6", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
+        endTL.to(".end .text_7", {duration: 0.00001, autoAlpha: 1, display:'block'}, "start+=20")
+        endTL.to(".end .text_8", {duration: 0.00001, autoAlpha: 1, display:'block'}, "start+=20")
+        endTL.to(".end .face", {duration: 0.00001, autoAlpha: 1, display:'block'}, "start+=20")
+        endTL.to(".end .mg-container", {duration: 0.00001, autoAlpha: 0, display:'none'}, "start+=20")
     }
 
     fadeMusic() {
