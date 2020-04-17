@@ -7,6 +7,17 @@ import LoaderSVG from '../../assets/loader.svg';
 class Loader extends React.Component {
     constructor(props) {
         super(props);
+
+        this.clickIt = this.clickIt.bind(this);
+        
+        this.state = {
+            loading: true
+        }
+    }
+
+    clickIt() {
+        this.setState({loading:false});
+        this.props.playSound()
     }
 
     render() {
@@ -15,8 +26,8 @@ class Loader extends React.Component {
                 <h1>Is your sound on?</h1>
                 
                 {this.props.sound ? (
-                    <p onClick={this.props.playSound}>Yes!</p>
-                ) : <LoaderSVG className="indicator" />}
+                    <p onClick={this.clickIt}>Yes!</p>
+                ) : this.state.loading && <LoaderSVG className="indicator" />}
             </div>
         )
     }

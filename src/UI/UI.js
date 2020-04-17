@@ -130,7 +130,7 @@ class UI extends React.Component {
                         </div>
                         <div className="line" id="line_2"></div>
                         <div className="input">
-                            <h1 className="answer" id="text_4">Please, select your weapon of choice...</h1>
+                            <h1 className="answer" id="text_4">Please, select your egg cracker of choice...</h1>
                             <div className="weapons">
                                 {
                                     weapons.map(w => {

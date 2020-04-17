@@ -24,6 +24,32 @@
         left: 45%;
     }
 
+    .weapon {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 35%;
+        padding-bottom: 35%;
+        opacity: 0;
+
+        &.hammer {
+            background: url('../../assets/cursor-hammer-tap.png') top left no-repeat;                
+            background-size: 100%;
+        }
+
+        &.spoon {
+            background: url('../../assets/cursor-spoon-tap.png') top left no-repeat;                
+            background-size: 100%;
+        }
+
+        &.cottoncandy {
+            background: url('../../assets/cursor-candy-tap.png') top left no-repeat;                
+            background-size: 100%;
+        }
+    }
+
     .face {
         position: absolute;
         top: 53%;

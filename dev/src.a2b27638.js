@@ -28438,7 +28438,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"./../../assets/mg.png":[["mg.197ddd64.png","assets/mg.png"],"assets/mg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/End.js":[function(require,module,exports) {
+},{"./../../assets/cursor-hammer-tap.png":[["cursor-hammer-tap.ae823bb5.png","assets/cursor-hammer-tap.png"],"assets/cursor-hammer-tap.png"],"./../../assets/cursor-spoon-tap.png":[["cursor-spoon-tap.79cc69f1.png","assets/cursor-spoon-tap.png"],"assets/cursor-spoon-tap.png"],"./../../assets/cursor-candy-tap.png":[["cursor-candy-tap.31ff5314.png","assets/cursor-candy-tap.png"],"assets/cursor-candy-tap.png"],"./../../assets/heads/troy.png":[["troy.1da073c2.png","assets/heads/troy.png"],"assets/heads/troy.png"],"./../../assets/heads/alison.png":[["alison.7493c799.png","assets/heads/alison.png"],"assets/heads/alison.png"],"./../../assets/heads/junior.png":[["junior.aff4a74e.png","assets/heads/junior.png"],"assets/heads/junior.png"],"./../../assets/heads/sombra.png":[["sombra.00691bbb.png","assets/heads/sombra.png"],"assets/heads/sombra.png"],"./../../assets/heads/yusaku.png":[["yusaku.32bc62d2.png","assets/heads/yusaku.png"],"assets/heads/yusaku.png"],"./../../assets/heads/kit.png":[["kit.e1045790.png","assets/heads/kit.png"],"assets/heads/kit.png"],"./../../assets/heads/sean.png":[["sean.e0629dd3.png","assets/heads/sean.png"],"assets/heads/sean.png"],"./../../assets/heads/akiko.png":[["akiko.a08a382a.png","assets/heads/akiko.png"],"assets/heads/akiko.png"],"./../../assets/heads/michael.png":[["michael.ab0fea41.png","assets/heads/michael.png"],"assets/heads/michael.png"],"./../../assets/heads/kelvin.png":[["kelvin.b8362e31.png","assets/heads/kelvin.png"],"assets/heads/kelvin.png"],"./../../assets/heads/pete.png":[["pete.b3fb4512.png","assets/heads/pete.png"],"assets/heads/pete.png"],"./../../assets/heads/tyler.png":[["tyler.7c247420.png","assets/heads/tyler.png"],"assets/heads/tyler.png"],"./../../assets/heads/noelle.png":[["noelle.105ec30a.png","assets/heads/noelle.png"],"assets/heads/noelle.png"],"./../../assets/heads/kristina.png":[["kristina.b29bfc64.png","assets/heads/kristina.png"],"assets/heads/kristina.png"],"./../../assets/heads/kayla.png":[["kayla.c69dc4c9.png","assets/heads/kayla.png"],"assets/heads/kayla.png"],"./../../assets/heads/james.png":[["james.2b406e24.png","assets/heads/james.png"],"assets/heads/james.png"],"./../../assets/heads/vinny.png":[["vinny.ca24a464.png","assets/heads/vinny.png"],"assets/heads/vinny.png"],"./../../assets/mg.png":[["mg.197ddd64.png","assets/mg.png"],"assets/mg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/Game/End.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29200,7 +29200,7 @@ var UI = /*#__PURE__*/function (_React$Component) {
           }, /*#__PURE__*/_react.default.createElement("h1", {
             className: "answer",
             id: "text_4"
-          }, "Please, select your weapon of choice..."), /*#__PURE__*/_react.default.createElement("div", {
+          }, "Please, select your egg cracker of choice..."), /*#__PURE__*/_react.default.createElement("div", {
             className: "weapons"
           }, weapons.map(function (w) {
             return /*#__PURE__*/_react.default.createElement("div", {
@@ -29554,19 +29554,34 @@ var Loader = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Loader);
 
   function Loader(props) {
+    var _this;
+
     _classCallCheck(this, Loader);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.clickIt = _this.clickIt.bind(_assertThisInitialized(_this));
+    _this.state = {
+      loading: true
+    };
+    return _this;
   }
 
   _createClass(Loader, [{
+    key: "clickIt",
+    value: function clickIt() {
+      this.setState({
+        loading: false
+      });
+      this.props.playSound();
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "loading"
       }, /*#__PURE__*/_react.default.createElement("h1", null, "Is your sound on?"), this.props.sound ? /*#__PURE__*/_react.default.createElement("p", {
-        onClick: this.props.playSound
-      }, "Yes!") : /*#__PURE__*/_react.default.createElement(_loader.default, {
+        onClick: this.clickIt
+      }, "Yes!") : this.state.loading && /*#__PURE__*/_react.default.createElement(_loader.default, {
         className: "indicator"
       }));
     }
@@ -38755,7 +38770,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var AMMO = 5;
+var AMMO = 1;
 
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
@@ -38992,7 +39007,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62544" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63961" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

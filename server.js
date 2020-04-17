@@ -13,7 +13,8 @@ app.get('/', function (req, res) {
 });
 
 var clicks = 0;
-let max = 100;
+let base = 230;
+let max = 230;
 let ended = 0;
 
 let colors = ['red', 'blue', 'green'];
@@ -79,7 +80,7 @@ io.on('connection', function (socket) {
 
         // console.log(players)
 
-        max = players.length * 100;
+        max = players.length * base;
 
         console.log("max increased",max)
 

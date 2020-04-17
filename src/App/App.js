@@ -10,7 +10,7 @@ import './App.scss';
 
 import { socketOnConnect, socketOnEggClick, socketOnStartGame, socketOnEndGame } from '../api';
 
-const AMMO = 5;
+const AMMO = 1;
 
 class App extends React.Component {
     

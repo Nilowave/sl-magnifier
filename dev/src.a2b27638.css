@@ -143,6 +143,27 @@
   font-size: 2em;
   left: 45%;
 }
+.end .weapon {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  padding-bottom: 35%;
+  opacity: 0;
+}
+.end .weapon.hammer {
+  background: url("/cursor-hammer-tap.ae823bb5.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .weapon.spoon {
+  background: url("/cursor-spoon-tap.79cc69f1.png") top left no-repeat;
+  background-size: 100%;
+}
+.end .weapon.cottoncandy {
+  background: url("/cursor-candy-tap.31ff5314.png") top left no-repeat;
+  background-size: 100%;
+}
 .end .face {
   position: absolute;
   top: 53%;
